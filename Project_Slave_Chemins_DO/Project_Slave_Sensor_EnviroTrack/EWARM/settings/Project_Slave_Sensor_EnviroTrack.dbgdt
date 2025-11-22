@@ -152,7 +152,7 @@
                     <item>sButton</item>
                     <item>sSensor_DO</item>
                     <item>sSaltPSU_RecvMaster</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

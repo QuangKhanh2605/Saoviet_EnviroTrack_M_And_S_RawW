@@ -64,8 +64,8 @@ sOjectInformation  sLCDObject[] =
     
     {   __SET_NH4_TITLE,        "CALIB SENSOR",   NULL,   _DTYPE_STRING,   0x00,  NULL,       0,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
     {   __SET_NH4_VALUE,        "NH4: ",          NULL,   _DTYPE_I32,      0xFF,  NULL,       2,  5,  0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
-    {   __SET_NH4_CALIB_ZERO,   "1.Zero :",       NULL,   _DTYPE_I32,      0xFE,  NULL,       3,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
-    {   __SET_NH4_CALIB_SLOPE,  "2.Slope:",       NULL,   _DTYPE_I32,      0xFE,  NULL,       4,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
+    {   __SET_NH4_CALIB_ZERO,   "1.Zero :",       NULL,   _DTYPE_I32,      0xFE,  " mg/L",       3,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
+    {   __SET_NH4_CALIB_SLOPE,  "2.Slope:",       NULL,   _DTYPE_I32,      0xFE,  " mg/L",       4,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
     {   __SET_NH4_RESET,        "3.Reset",        NULL,   _DTYPE_STRING,   0x00,  NULL,       5,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
     
     {   __SET_OFFSET_TITLE, "OFFSET",           NULL,   _DTYPE_STRING,  0,      NULL,       0,  0, 0x00,     _LCD_SCR_SET_OFFSET},
