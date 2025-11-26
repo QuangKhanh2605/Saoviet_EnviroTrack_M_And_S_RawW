@@ -372,11 +372,11 @@ void BUTTON_Enter_Process (void)
                 switch (sLCD.sScreenBack.Para_u8)
                 {
                     case __SET_OFFSET_NH4:
-                      Save_ParamCalib(((float)sButton.Old_value/100), sSensor_NH4.temp_Offset_f);
+                      Save_ParamCalib(((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_NH4)), sSensor_NH4.temp_Offset_f);
                       break;
                       
                     case __SET_OFFSET_TEMP:
-                      Save_ParamCalib(sSensor_NH4.NH4_Offset_f, ((float)sButton.Old_value/100));
+                      Save_ParamCalib(sSensor_NH4.NH4_Offset_f, ((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_Temp)));
                       break;
                       
                     default:

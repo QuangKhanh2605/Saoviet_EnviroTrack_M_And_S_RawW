@@ -171,6 +171,10 @@ typedef struct
     uint8_t     ID_u8;
     uint32_t    Baudrate_u32;
     
+    uint8_t     Scale_COD;
+    uint8_t     Scale_TURB;
+    uint8_t     Scale_Temp;
+    
     int32_t     COD_Value_i32;
     int32_t     TURB_Value_i32;
     int32_t     Temp_Value_i32;

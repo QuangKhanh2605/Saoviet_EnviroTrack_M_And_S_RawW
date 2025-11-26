@@ -423,15 +423,15 @@ void BUTTON_Enter_Process (void)
                 switch (sLCD.sScreenBack.Para_u8)
                 {
                     case __SET_OFFSET_COD:
-                      Save_ParamCalib(((float)sButton.Old_value/10), sSensor_COD.TURB_Offset_f, sSensor_COD.temp_Offset_f);
+                      Save_ParamCalib(((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_COD)), sSensor_COD.TURB_Offset_f, sSensor_COD.temp_Offset_f);
                       break;
                       
                     case __SET_OFFSET_TURB:
-                      Save_ParamCalib(sSensor_COD.COD_Offset_f, ((float)sButton.Old_value/10), sSensor_COD.temp_Offset_f);
+                      Save_ParamCalib(sSensor_COD.COD_Offset_f, ((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_TURB)), sSensor_COD.temp_Offset_f);
                       break;
                       
                     case __SET_OFFSET_TEMP:
-                      Save_ParamCalib(sSensor_COD.COD_Offset_f, sSensor_COD.TURB_Offset_f, ((float)sButton.Old_value/100));
+                      Save_ParamCalib(sSensor_COD.COD_Offset_f, sSensor_COD.TURB_Offset_f, ((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_Temp)));
                       break;
                       
                     default:

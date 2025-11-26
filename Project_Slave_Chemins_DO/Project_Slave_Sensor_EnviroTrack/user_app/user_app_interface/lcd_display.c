@@ -26,11 +26,15 @@ sEvent_struct sEventDisplay [] =
 
 sLCDinformation      sLCD;
 
-sParameter_Display   sParaDisplay = {0};
+sParameter_Display   sParaDisplay = {
+    .Scale_Oxy_MGL  = 0xFE,
+    .Scale_Oxy_PER  = 0xFF,
+    .Scale_Temp     = 0xFE,
+};
 
 sData   sModelVersion = {(uint8_t *) "SV_ENVI_CM_DO", 13}; 
 
-uint8_t aPASSWORD[4] = {"0000"};
+uint8_t aPASSWORD[4] = {"1111"};
 
 uint8_t aSTT_SETTING_FREE[14]   = {"              "};
 uint8_t aSTT_SETTING_ENTER[14]  = {"Enter to Setup"};
@@ -41,11 +45,11 @@ uint8_t aSTT_SETTING_ERROR[14]  = {"     Error   "};
 sOjectInformation  sLCDObject[] = 
 {
 //          para          name                  value      dtype         scale   unit      row  col      screen
-    {   __SC1_TITLE,      "Sensor.",        NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_SALT,       "PSU:",           NULL,   _DTYPE_I32,      0xFF,         NULL,      0,  70,  0x00,     _LCD_SCREEN_1  },
-    {   __SC1_DO_MGL,     NULL,             NULL,   _DTYPE_I16,      0xFE,     "mg/L",     4,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_DO_PER,     "DO    : ",       NULL,   _DTYPE_I16,      0xFF,     " %",        6,  0,  0x00,     _LCD_SCREEN_1  },
-    {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0xFE,     " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TITLE,      "DO.",            NULL,   _DTYPE_STRING,   0,     NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_SALT,       "PSU:",           NULL,   _DTYPE_I32,      0,     NULL,      0,  70,  0x00,     _LCD_SCREEN_1  },
+    {   __SC1_DO_MGL,     NULL,             NULL,   _DTYPE_I16,      0,     "mg/L",     4,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_DO_PER,     "DO    : ",       NULL,   _DTYPE_I16,      0,     " %",        6,  0,  0x00,     _LCD_SCREEN_1  },
+    {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0,     " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
   
     {   __PASS_WORD_TITLE,  "Loggin",         NULL,   _DTYPE_STRING,   0,      NULL,     0,   0, 0x00,      _LCD_SCR_PASS    },
     {   __PASS_WORD_1,    "Enter Password",   NULL,   _DTYPE_STRING,   0,      NULL,      2,  24, 0x00,      _LCD_SCR_PASS    },
@@ -62,15 +66,15 @@ sOjectInformation  sLCDObject[] =
     {   __SET_MODBUS_BR,        "2.Baudrate: ",   NULL,   _DTYPE_U32,      0x00,   NULL,      3,   4, 0x00,   _LCD_SCR_SET_MODBUS },
     
     {   __SET_PH_TITLE,     "CALIB SENSOR",     NULL,   _DTYPE_STRING,   0x00,  NULL,       0,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_DO},
-    {   __SET_DO_VALUE,     "DO: ",             NULL,   _DTYPE_I32,      0xFF,  NULL,       2,  5,  0x00,    _LCD_SCR_SET_CALIB_SS_DO},
+    {   __SET_DO_VALUE,     "DO: ",             NULL,   _DTYPE_I32,      0,  NULL,       2,  5,  0x00,    _LCD_SCR_SET_CALIB_SS_DO},
     {   __SET_DO_CALIB_100, "1.Calib 100%",     NULL,   _DTYPE_STRING,   0x00,  NULL,       3,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_DO},
     {   __SET_DO_CALIB_0,   "2.Calib 0%",       NULL,   _DTYPE_STRING,   0x00,  NULL,       4,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_DO},
     {   __SET_DO_RESET,     "3.Reset",          NULL,   _DTYPE_STRING,   0x00,  NULL,       5,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_DO},
     
     {   __SET_OFFSET_TITLE, "OFFSET",           NULL,   _DTYPE_STRING,  0,      NULL,       0,  0, 0x00,     _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_DO_MGL,"1.Oxy_M : ",       NULL,   _DTYPE_I32,     0xFE,   " mg/L",    2,  0, 0x00, _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_DO_PER,"2.Oxy_P : ",       NULL,   _DTYPE_I32,     0xFE,   " %",       3,  0, 0x00,    _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_TEMP,  "3.Temp  : ",       NULL,   _DTYPE_I32,     0xFE,   " ‰C",      4,  0, 0x00,   _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_DO_MGL,"1.Oxy_M : ",       NULL,   _DTYPE_I32,     0,   " mg/L",    2,  0, 0x00, _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_DO_PER,"2.Oxy_P : ",       NULL,   _DTYPE_I32,     0,   " %",       3,  0, 0x00,    _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_TEMP,  "3.Temp  : ",       NULL,   _DTYPE_I32,     0,   " ‰C",      4,  0, 0x00,   _LCD_SCR_SET_OFFSET},
     
     {   __SCR_INFOR_TITLE,          "Infor.",   NULL,   _DTYPE_STRING,   0,      NULL,      0,   0, 0x00,    _LCD_SCR_SET_INFORMATION },
     {   __SCR_INFOR_FW_VERSION_1,   "*Version", NULL,   _DTYPE_STRING,   0,      NULL,      2,   28, 0x00,   _LCD_SCR_SET_INFORMATION },
@@ -102,16 +106,26 @@ void Display_Init (void)
     sLCDObject[__SET_MODBUS_ID].pData  = &sParaDisplay.ID_u8; 
     sLCDObject[__SET_MODBUS_BR].pData  = &sParaDisplay.Baudrate_u32; 
     
-    sLCDObject[__SC1_SALT].pData       = &sParaDisplay.Salt_Compensation_i32;   
-    sLCDObject[__SC1_DO_MGL].pData     = &sParaDisplay.Oxy_Mg_L_Filter_i32;    
-    sLCDObject[__SC1_DO_PER].pData     = &sParaDisplay.Oxy_Percent_Filter_i32;    
-    sLCDObject[__SC1_TEMP].pData       = &sParaDisplay.Temp_Filter_i32;    
+    sLCDObject[__SC1_SALT].pData       = &sParaDisplay.Salt_Compensation_i32; 
     
-    sLCDObject[__SET_DO_VALUE].pData        = &sParaDisplay.Oxy_Percent_Value_i32; 
+    sLCDObject[__SC1_DO_MGL].pData     = &sParaDisplay.Oxy_Mg_L_Filter_i32; 
+    sLCDObject[__SC1_DO_MGL].Scale_u8  = sParaDisplay.Scale_Oxy_MGL;
+    
+    sLCDObject[__SC1_DO_PER].pData     = &sParaDisplay.Oxy_Percent_Filter_i32;   
+    sLCDObject[__SC1_DO_PER].Scale_u8  = sParaDisplay.Scale_Oxy_PER;
+    
+    sLCDObject[__SC1_TEMP].pData       = &sParaDisplay.Temp_Filter_i32;   
+    sLCDObject[__SC1_TEMP].Scale_u8    = sParaDisplay.Scale_Temp;
+    
+    sLCDObject[__SET_DO_VALUE].pData     = &sParaDisplay.Oxy_Percent_Value_i32; 
+    sLCDObject[__SET_DO_VALUE].Scale_u8  = sParaDisplay.Scale_Oxy_PER;
 
-    sLCDObject[__SET_OFFSET_DO_MGL].pData   = &sParaDisplay.Oxy_Mg_L_Offset_i32; 
-    sLCDObject[__SET_OFFSET_DO_PER].pData   = &sParaDisplay.Oxy_Percent_Offset_i32; 
-    sLCDObject[__SET_OFFSET_TEMP].pData     = &sParaDisplay.temp_Offset_i32; 
+    sLCDObject[__SET_OFFSET_DO_MGL].pData     = &sParaDisplay.Oxy_Mg_L_Offset_i32; 
+    sLCDObject[__SET_OFFSET_DO_MGL].Scale_u8  = sParaDisplay.Scale_Oxy_MGL;
+    sLCDObject[__SET_OFFSET_DO_PER].pData     = &sParaDisplay.Oxy_Percent_Offset_i32; 
+    sLCDObject[__SET_OFFSET_DO_PER].Scale_u8  = sParaDisplay.Scale_Oxy_PER;
+    sLCDObject[__SET_OFFSET_TEMP].pData       = &sParaDisplay.temp_Offset_i32; 
+    sLCDObject[__SET_OFFSET_TEMP].Scale_u8    = sParaDisplay.Scale_Temp;
 
     sLCDObject[__SCR_INFOR_FW_VERSION_2].pData   = sFirmVersion.Data_a8;
     sLCDObject[__SCR_INFOR_MODEL_2].pData   = sModelVersion.Data_a8;
@@ -348,17 +362,17 @@ void Update_ParaDisplay(void)
     sParaDisplay.ID_u8 = sSlave_ModbusRTU.ID;
     sParaDisplay.Baudrate_u32 = aBaudrate_value[sSlave_ModbusRTU.Baudrate];
     
-    sParaDisplay.Oxy_Mg_L_Value_i32 = (int32_t)(sSensor_DO.Oxy_Mg_L_Value_f*100);
-    sParaDisplay.Oxy_Percent_Value_i32 = (int32_t)(sSensor_DO.Oxy_Percent_Value_f*10);
-    sParaDisplay.Temp_Value_i32 = (int32_t)(sSensor_DO.temp_Value_f*100);
+    sParaDisplay.Oxy_Mg_L_Value_i32 = (int32_t)(sSensor_DO.Oxy_Mg_L_Value_f * Calculator_Scale(sParaDisplay.Scale_Oxy_MGL));
+    sParaDisplay.Oxy_Percent_Value_i32 = (int32_t)(sSensor_DO.Oxy_Percent_Value_f * Calculator_Scale(sParaDisplay.Scale_Oxy_PER));
+    sParaDisplay.Temp_Value_i32 = (int32_t)(sSensor_DO.temp_Value_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.Oxy_Mg_L_Filter_i32 = (int32_t)(sSensor_DO.Oxy_Mg_L_Filter_f*100);
-    sParaDisplay.Oxy_Percent_Filter_i32 = (int32_t)(sSensor_DO.Oxy_Percent_Filter_f*10);
-    sParaDisplay.Temp_Filter_i32 = (int32_t)(sSensor_DO.temp_Filter_f*100);
+    sParaDisplay.Oxy_Mg_L_Filter_i32 = (int32_t)(sSensor_DO.Oxy_Mg_L_Filter_f * Calculator_Scale(sParaDisplay.Scale_Oxy_MGL));
+    sParaDisplay.Oxy_Percent_Filter_i32 = (int32_t)(sSensor_DO.Oxy_Percent_Filter_f * Calculator_Scale(sParaDisplay.Scale_Oxy_PER));
+    sParaDisplay.Temp_Filter_i32 = (int32_t)(sSensor_DO.temp_Filter_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.Oxy_Mg_L_Offset_i32   = (int32_t)(sSensor_DO.Oxy_Mg_L_Offset_f*100);
-    sParaDisplay.Oxy_Percent_Offset_i32   = (int32_t)(sSensor_DO.Oxy_Percent_Offset_f*10);
-    sParaDisplay.temp_Offset_i32 = (int32_t)(sSensor_DO.temp_Offset_f*100);
+    sParaDisplay.Oxy_Mg_L_Offset_i32   = (int32_t)(sSensor_DO.Oxy_Mg_L_Offset_f * Calculator_Scale(sParaDisplay.Scale_Oxy_MGL));
+    sParaDisplay.Oxy_Percent_Offset_i32   = (int32_t)(sSensor_DO.Oxy_Percent_Offset_f * Calculator_Scale(sParaDisplay.Scale_Oxy_PER));
+    sParaDisplay.temp_Offset_i32 = (int32_t)(sSensor_DO.temp_Offset_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
     sParaDisplay.Salt_Compensation_i32 = (int32_t)(sSaltPSU_RecvMaster.SaltPSU_f*10);
 }

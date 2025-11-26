@@ -368,15 +368,15 @@ void BUTTON_Enter_Process (void)
                 switch (sLCD.sScreenBack.Para_u8)
                 {
                     case __SET_OFFSET_DO_MGL:
-                      Save_ParamCalib(((float)sButton.Old_value/100), sSensor_DO.Oxy_Percent_Offset_f, sSensor_DO.temp_Offset_f);
+                      Save_ParamCalib(((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_Oxy_MGL)), sSensor_DO.Oxy_Percent_Offset_f, sSensor_DO.temp_Offset_f);
                       break;
                       
                     case __SET_OFFSET_DO_PER:
-                      Save_ParamCalib(sSensor_DO.Oxy_Mg_L_Offset_f, ((float)sButton.Old_value/10), sSensor_DO.temp_Offset_f);
+                      Save_ParamCalib(sSensor_DO.Oxy_Mg_L_Offset_f, ((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_Oxy_PER)), sSensor_DO.temp_Offset_f);
                       break;
                       
                     case __SET_OFFSET_TEMP:
-                      Save_ParamCalib(sSensor_DO.Oxy_Mg_L_Offset_f, sSensor_DO.Oxy_Percent_Offset_f, ((float)sButton.Old_value/100));
+                      Save_ParamCalib(sSensor_DO.Oxy_Mg_L_Offset_f, sSensor_DO.Oxy_Percent_Offset_f, ((float)sButton.Old_value/Calculator_Scale(sParaDisplay.Scale_Temp)));
                       break;
                       
                     default:

@@ -26,11 +26,15 @@ sEvent_struct sEventDisplay [] =
 
 sLCDinformation      sLCD;
 
-sParameter_Display   sParaDisplay = {0};
+sParameter_Display   sParaDisplay = {
+    .Scale_COD    = 0xFF,
+    .Scale_TURB   = 0xFF,
+    .Scale_Temp   = 0xFE,
+};
 
 sData   sModelVersion = {(uint8_t *) "SV_ENVI_CM_COD", 14}; 
 
-uint8_t aPASSWORD[4] = {"0000"};
+uint8_t aPASSWORD[4] = {"1111"};
 
 uint8_t aSTT_SETTING_FREE[14]   = {"              "};
 uint8_t aSTT_SETTING_ENTER[14]  = {"Enter to Setup"};
@@ -41,10 +45,10 @@ uint8_t aSTT_SETTING_ERROR[14]  = {"     Error   "};
 sOjectInformation  sLCDObject[] = 
 {
 //          para          name                  value      dtype         scale   unit      row  col      screen
-    {   __SC1_TITLE,      "Sensor.",        NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_COD,        NULL,             NULL,   _DTYPE_I16,      0xFF,     "mg/L",      4,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_TURB,       "Turb  : ",             NULL,   _DTYPE_I16,      0xFF,     " NTU",      6,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0xFE,      " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TITLE,      "COD.",           NULL,   _DTYPE_STRING,   0,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_COD,        NULL,             NULL,   _DTYPE_I16,      0,     "mg/L",      4,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TURB,       "Turb  : ",       NULL,   _DTYPE_I16,      0,     " NTU",      6,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0,      " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
   
     {   __PASS_WORD_TITLE,  "Loggin",         NULL,   _DTYPE_STRING,   0,      NULL,     0,   0, 0x00,      _LCD_SCR_PASS    },
     {   __PASS_WORD_1,    "Enter Password",   NULL,   _DTYPE_STRING,   0,      NULL,      2,  24, 0x00,      _LCD_SCR_PASS    },
@@ -61,18 +65,18 @@ sOjectInformation  sLCDObject[] =
     {   __SET_MODBUS_BR,        "2.Baudrate: ",   NULL,   _DTYPE_U32,      0x00,   NULL,      3,   4, 0x00,   _LCD_SCR_SET_MODBUS },
     
     {   __SET_COD_TITLE,        "CALIB SENSOR",   NULL,   _DTYPE_STRING,   0x00,  NULL,       0,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_COD_VALUE,        "C: ",            NULL,   _DTYPE_I32,      0xFF,  NULL,       2,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_TURB_VALUE,       "T: ",            NULL,   _DTYPE_I32,      0xFF,  NULL,       2,  60, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_COD_CALIB_ZERO,   "1.COD_Z: ",      NULL,   _DTYPE_I32,      0xFF,  " mg/L",    3,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_COD_CALIB_SLOPE,  "2.COD_S: ",      NULL,   _DTYPE_I32,      0xFF,  " mg/L",    4,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_TURB_CALIB_ZERO,  "3.TUR_Z: ",      NULL,   _DTYPE_I32,      0xFF,  " NTU",      5,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_TURB_CALIB_SLOPE, "4.TUR_S: ",      NULL,   _DTYPE_I32,      0xFF,  " NTU",      6,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
-    {   __SET_COD_RESET,        "5.Reset",        NULL,   _DTYPE_STRING,   0x00,  NULL,       7,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_COD_VALUE,        "C: ",            NULL,   _DTYPE_I32,      0,  NULL,       2,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_TURB_VALUE,       "T: ",            NULL,   _DTYPE_I32,      0,  NULL,       2,  60, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_COD_CALIB_ZERO,   "1.COD_Z: ",      NULL,   _DTYPE_I32,      0,  " mg/L",    3,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_COD_CALIB_SLOPE,  "2.COD_S: ",      NULL,   _DTYPE_I32,      0,  " mg/L",    4,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_TURB_CALIB_ZERO,  "3.TUR_Z: ",      NULL,   _DTYPE_I32,      0,  " NTU",      5,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_TURB_CALIB_SLOPE, "4.TUR_S: ",      NULL,   _DTYPE_I32,      0,  " NTU",      6,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
+    {   __SET_COD_RESET,        "5.Reset",        NULL,   _DTYPE_STRING,   0,  NULL,       7,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_COD},
     
     {   __SET_OFFSET_TITLE, "OFFSET",           NULL,   _DTYPE_STRING,  0,      NULL,       0,  0, 0x00,    _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_COD,   "1.COD : ",         NULL,   _DTYPE_I32,     0xFE,   " mg/L",    2,  0, 0x00,    _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_TURB,  "2.TURB : ",        NULL,   _DTYPE_I32,     0xFE,   " NTU",     3,  0, 0x00,    _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_TEMP,  "3.Temp  : ",       NULL,   _DTYPE_I32,     0xFE,   " ‰C",      4,  0, 0x00,    _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_COD,   "1.COD  : ",        NULL,   _DTYPE_I32,     0,   " mg/L",    2,  0, 0x00,    _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_TURB,  "2.TURB : ",        NULL,   _DTYPE_I32,     0,   " NTU",     3,  0, 0x00,    _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_TEMP,  "3.Temp : ",        NULL,   _DTYPE_I32,     0,   " ‰C",      4,  0, 0x00,    _LCD_SCR_SET_OFFSET},
     
     {   __SCR_INFOR_TITLE,          "Infor.",   NULL,   _DTYPE_STRING,   0,      NULL,      0,   0, 0x00,    _LCD_SCR_SET_INFORMATION },
     {   __SCR_INFOR_FW_VERSION_1,   "*Version", NULL,   _DTYPE_STRING,   0,      NULL,      2,   28, 0x00,   _LCD_SCR_SET_INFORMATION },
@@ -105,21 +109,33 @@ void Display_Init (void)
     sLCDObject[__SET_MODBUS_BR].pData  = &sParaDisplay.Baudrate_u32; 
     
     sLCDObject[__SC1_COD].pData        = &sParaDisplay.COD_Filter_i32;    
+    sLCDObject[__SC1_COD].Scale_u8     = sParaDisplay.Scale_COD;  
     sLCDObject[__SC1_TURB].pData       = &sParaDisplay.TURB_Filter_i32;    
+    sLCDObject[__SC1_TURB].Scale_u8    = sParaDisplay.Scale_TURB; 
     sLCDObject[__SC1_TEMP].pData       = &sParaDisplay.Temp_Filter_i32;    
+    sLCDObject[__SC1_TEMP].Scale_u8    = sParaDisplay.Scale_Temp; 
     
     sLCDObject[__SET_COD_VALUE].pData       = &sParaDisplay.COD_Value_i32; 
+    sLCDObject[__SET_COD_VALUE].Scale_u8    = sParaDisplay.Scale_COD;
     sLCDObject[__SET_TURB_VALUE].pData      = &sParaDisplay.TURB_Value_i32;
+    sLCDObject[__SET_TURB_VALUE].Scale_u8   = sParaDisplay.Scale_TURB;
     
-    sLCDObject[__SET_COD_CALIB_ZERO].pData  = &sParaDisplay.COD_Calib_Zero_i32; 
-    sLCDObject[__SET_COD_CALIB_SLOPE].pData = &sParaDisplay.COD_Calib_Slope_i32; 
+    sLCDObject[__SET_COD_CALIB_ZERO].pData      = &sParaDisplay.COD_Calib_Zero_i32; 
+    sLCDObject[__SET_COD_CALIB_ZERO].Scale_u8   = sParaDisplay.Scale_COD;  
+    sLCDObject[__SET_COD_CALIB_SLOPE].pData     = &sParaDisplay.COD_Calib_Slope_i32; 
+    sLCDObject[__SET_COD_CALIB_SLOPE].Scale_u8  = sParaDisplay.Scale_COD;  
     
-    sLCDObject[__SET_TURB_CALIB_ZERO].pData  = &sParaDisplay.TURB_Calib_Zero_i32; 
+    sLCDObject[__SET_TURB_CALIB_ZERO].pData  = &sParaDisplay.TURB_Calib_Zero_i32;
+    sLCDObject[__SET_TURB_CALIB_ZERO].Scale_u8    = sParaDisplay.Scale_TURB; 
     sLCDObject[__SET_TURB_CALIB_SLOPE].pData = &sParaDisplay.TURB_Calib_Slope_i32; 
+    sLCDObject[__SET_TURB_CALIB_SLOPE].Scale_u8    = sParaDisplay.Scale_TURB; 
     
     sLCDObject[__SET_OFFSET_COD].pData      = &sParaDisplay.COD_Offset_i32; 
+    sLCDObject[__SET_OFFSET_COD].Scale_u8     = sParaDisplay.Scale_COD;  
     sLCDObject[__SET_OFFSET_TURB].pData     = &sParaDisplay.TURB_Offset_i32;
+    sLCDObject[__SET_OFFSET_TURB].Scale_u8    = sParaDisplay.Scale_TURB; 
     sLCDObject[__SET_OFFSET_TEMP].pData     = &sParaDisplay.temp_Offset_i32; 
+    sLCDObject[__SET_OFFSET_TEMP].Scale_u8    = sParaDisplay.Scale_Temp; 
 
     sLCDObject[__SCR_INFOR_FW_VERSION_2].pData   = sFirmVersion.Data_a8;
     sLCDObject[__SCR_INFOR_MODEL_2].pData   = sModelVersion.Data_a8;
@@ -356,23 +372,23 @@ void Update_ParaDisplay(void)
     sParaDisplay.ID_u8 = sSlave_ModbusRTU.ID;
     sParaDisplay.Baudrate_u32 = aBaudrate_value[sSlave_ModbusRTU.Baudrate];
     
-    sParaDisplay.COD_Value_i32 = (int32_t)(sSensor_COD.COD_Value_f*10);
-    sParaDisplay.TURB_Value_i32 = (int32_t)(sSensor_COD.TURB_Value_f*10);
-    sParaDisplay.Temp_Value_i32 = (int32_t)(sSensor_COD.temp_Value_f*100);
+    sParaDisplay.COD_Value_i32 = (int32_t)(sSensor_COD.COD_Value_f * Calculator_Scale(sParaDisplay.Scale_COD));
+    sParaDisplay.TURB_Value_i32 = (int32_t)(sSensor_COD.TURB_Value_f * Calculator_Scale(sParaDisplay.Scale_TURB));
+    sParaDisplay.Temp_Value_i32 = (int32_t)(sSensor_COD.temp_Value_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.COD_Filter_i32 = (int32_t)(sSensor_COD.COD_Filter_f*10);
-    sParaDisplay.TURB_Filter_i32 = (int32_t)(sSensor_COD.TURB_Filter_f*10);
-    sParaDisplay.Temp_Filter_i32 = (int32_t)(sSensor_COD.temp_Filter_f*100);
+    sParaDisplay.COD_Filter_i32 = (int32_t)(sSensor_COD.COD_Filter_f * Calculator_Scale(sParaDisplay.Scale_COD));
+    sParaDisplay.TURB_Filter_i32 = (int32_t)(sSensor_COD.TURB_Filter_f * Calculator_Scale(sParaDisplay.Scale_TURB));
+    sParaDisplay.Temp_Filter_i32 = (int32_t)(sSensor_COD.temp_Filter_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.COD_Offset_i32   = (int32_t)(sSensor_COD.COD_Offset_f*10);
-    sParaDisplay.TURB_Offset_i32   = (int32_t)(sSensor_COD.TURB_Offset_f*10);
-    sParaDisplay.temp_Offset_i32 = (int32_t)(sSensor_COD.temp_Offset_f*100);
+    sParaDisplay.COD_Offset_i32   = (int32_t)(sSensor_COD.COD_Offset_f * Calculator_Scale(sParaDisplay.Scale_COD));
+    sParaDisplay.TURB_Offset_i32   = (int32_t)(sSensor_COD.TURB_Offset_f * Calculator_Scale(sParaDisplay.Scale_TURB));
+    sParaDisplay.temp_Offset_i32 = (int32_t)(sSensor_COD.temp_Offset_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.COD_Calib_Zero_i32   = (int32_t)(sSensor_COD.COD_Zero_Calib_f*10);
-    sParaDisplay.COD_Calib_Slope_i32  = (int32_t)(sSensor_COD.COD_Slope_Calib_f*10);
+    sParaDisplay.COD_Calib_Zero_i32   = (int32_t)(sSensor_COD.COD_Zero_Calib_f * Calculator_Scale(sParaDisplay.Scale_COD));
+    sParaDisplay.COD_Calib_Slope_i32  = (int32_t)(sSensor_COD.COD_Slope_Calib_f * Calculator_Scale(sParaDisplay.Scale_COD));
     
-    sParaDisplay.TURB_Calib_Zero_i32   = (int32_t)(sSensor_COD.TURB_Zero_Calib_f*10);
-    sParaDisplay.TURB_Calib_Slope_i32  = (int32_t)(sSensor_COD.TURB_Slope_Calib_f*10);
+    sParaDisplay.TURB_Calib_Zero_i32   = (int32_t)(sSensor_COD.TURB_Zero_Calib_f * Calculator_Scale(sParaDisplay.Scale_TURB));
+    sParaDisplay.TURB_Calib_Slope_i32  = (int32_t)(sSensor_COD.TURB_Slope_Calib_f * Calculator_Scale(sParaDisplay.Scale_TURB));
 }
 
 void Display_Show_Oject (uint8_t object)

@@ -15,7 +15,6 @@ static uint8_t fevent_sensor_wait_calib(uint8_t event);
 
 static uint8_t fevent_detect_salt_recv(uint8_t event);
 static uint8_t fevent_temp_alarm(uint8_t event);
-static uint8_t fevent_refresh_wdg_hard(uint8_t event);
 static uint8_t fevent_sensor_reset(uint8_t event);
 /*==============================Struct=============================*/
 sEvent_struct               sEventAppSensor[]=
@@ -30,7 +29,6 @@ sEvent_struct               sEventAppSensor[]=
   
   {_EVENT_DETECT_SALT_RECV,          1, 5, 60000,            fevent_detect_salt_recv},
   {_EVENT_TEMP_ALARM,                1, 5, 2000,             fevent_temp_alarm},
-  {_EVENT_REFRESH_WDG_HARD,          1, 5, 5,                fevent_refresh_wdg_hard},
   
   {_EVENT_SENSOR_RESET,              1, 0, 2000,             fevent_sensor_reset},
 };
@@ -196,26 +194,6 @@ static uint8_t fevent_temp_alarm(uint8_t event)
 //    else 
 //        ALARM_OFF;
     
-    fevent_enable(sEventAppSensor, event);
-    return 1;
-}
-
-static uint8_t fevent_refresh_wdg_hard(uint8_t event)
-{
-    static uint8_t state = 0;
-    
-    if(state == 0)
-    {
-        HAL_GPIO_WritePin(TOGGLE_RESET_GPIO_Port, TOGGLE_RESET_Pin, GPIO_PIN_SET);
-        sEventAppSensor[_EVENT_REFRESH_WDG_HARD].e_period = 5;
-        state++;
-    }
-    else
-    {
-        HAL_GPIO_WritePin(TOGGLE_RESET_GPIO_Port, TOGGLE_RESET_Pin, GPIO_PIN_RESET);
-        sEventAppSensor[_EVENT_REFRESH_WDG_HARD].e_period = 250;
-        state = 0;
-    }
     fevent_enable(sEventAppSensor, event);
     return 1;
 }

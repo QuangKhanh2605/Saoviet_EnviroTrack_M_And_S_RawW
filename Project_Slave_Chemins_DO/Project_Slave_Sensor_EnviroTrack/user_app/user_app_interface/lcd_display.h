@@ -169,6 +169,10 @@ typedef struct
     uint8_t     ID_u8;
     uint32_t    Baudrate_u32;
     
+    uint8_t     Scale_Oxy_MGL;
+    uint8_t     Scale_Oxy_PER;
+    uint8_t     Scale_Temp;
+    
     int32_t     Oxy_Mg_L_Value_i32;
     int32_t     Oxy_Percent_Value_i32;
     int32_t     Temp_Value_i32;

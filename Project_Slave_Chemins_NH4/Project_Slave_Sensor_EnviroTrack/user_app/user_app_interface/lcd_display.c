@@ -27,13 +27,15 @@ sEvent_struct sEventDisplay [] =
 sLCDinformation      sLCD;
 
 sParameter_Display   sParaDisplay = {
+    .Scale_NH4    = 0xFE,
+    .Scale_Temp   = 0xFE,
     .NH4_Calib_Zero = 100,
     .NH4_Calib_Slope = 1000,
 };
 
 sData   sModelVersion = {(uint8_t *) "SV_ENVI_CM_NH4", 14}; 
 
-uint8_t aPASSWORD[4] = {"0000"};
+uint8_t aPASSWORD[4] = {"1111"};
 
 uint8_t aSTT_SETTING_FREE[14]   = {"              "};
 uint8_t aSTT_SETTING_ENTER[14]  = {"Enter to Setup"};
@@ -44,9 +46,9 @@ uint8_t aSTT_SETTING_ERROR[14]  = {"     Error   "};
 sOjectInformation  sLCDObject[] = 
 {
 //          para          name                  value      dtype         scale   unit      row  col      screen
-    {   __SC1_TITLE,      "Sensor.",        NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_NH4,        NULL,             NULL,   _DTYPE_I16,      0xFE,     "mg/L",     4,  0,  0x00,      _LCD_SCREEN_1  },
-    {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0xFE,     " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TITLE,      "NH4.",           NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_NH4,        NULL,             NULL,   _DTYPE_I16,      0,     "mg/L",     4,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0,     " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
   
     {   __PASS_WORD_TITLE,  "Loggin",         NULL,   _DTYPE_STRING,   0,      NULL,     0,   0, 0x00,      _LCD_SCR_PASS    },
     {   __PASS_WORD_1,    "Enter Password",   NULL,   _DTYPE_STRING,   0,      NULL,      2,  24, 0x00,      _LCD_SCR_PASS    },
@@ -63,14 +65,14 @@ sOjectInformation  sLCDObject[] =
     {   __SET_MODBUS_BR,        "2.Baudrate: ",   NULL,   _DTYPE_U32,      0x00,   NULL,      3,   4, 0x00,   _LCD_SCR_SET_MODBUS },
     
     {   __SET_NH4_TITLE,        "CALIB SENSOR",   NULL,   _DTYPE_STRING,   0x00,  NULL,       0,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
-    {   __SET_NH4_VALUE,        "NH4: ",          NULL,   _DTYPE_I32,      0xFF,  NULL,       2,  5,  0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
-    {   __SET_NH4_CALIB_ZERO,   "1.Zero :",       NULL,   _DTYPE_I32,      0xFE,  " mg/L",       3,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
-    {   __SET_NH4_CALIB_SLOPE,  "2.Slope:",       NULL,   _DTYPE_I32,      0xFE,  " mg/L",       4,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
-    {   __SET_NH4_RESET,        "3.Reset",        NULL,   _DTYPE_STRING,   0x00,  NULL,       5,  14, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
+    {   __SET_NH4_VALUE,        "NH4: ",          NULL,   _DTYPE_I32,      0,  NULL,       2,  5,  0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
+    {   __SET_NH4_CALIB_ZERO,   "1.Zero : ",       NULL,   _DTYPE_I32,      0,  " mg/L",    3,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
+    {   __SET_NH4_CALIB_SLOPE,  "2.Slope: ",       NULL,   _DTYPE_I32,      0,  " mg/L",    4,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
+    {   __SET_NH4_RESET,        "3.Reset",        NULL,   _DTYPE_STRING,   0x00,  NULL,       5,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_NH4},
     
     {   __SET_OFFSET_TITLE, "OFFSET",           NULL,   _DTYPE_STRING,  0,      NULL,       0,  0, 0x00,     _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_NH4,   "1.NH4  : ",       NULL,   _DTYPE_I32,     0xFE,   " mg/L",     2,  0, 0x00,     _LCD_SCR_SET_OFFSET},
-    {   __SET_OFFSET_TEMP,  "2.Temp : ",       NULL,   _DTYPE_I32,     0xFE,   " ‰C",       3,  0, 0x00,     _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_NH4,   "1.NH4  : ",        NULL,   _DTYPE_I32,     0,   " mg/L",     2,  0, 0x00,     _LCD_SCR_SET_OFFSET},
+    {   __SET_OFFSET_TEMP,  "2.Temp : ",        NULL,   _DTYPE_I32,     0,   " ‰C",       3,  0, 0x00,     _LCD_SCR_SET_OFFSET},
     
     {   __SCR_INFOR_TITLE,          "Infor.",   NULL,   _DTYPE_STRING,   0,      NULL,      0,   0, 0x00,    _LCD_SCR_SET_INFORMATION },
     {   __SCR_INFOR_FW_VERSION_1,   "*Version", NULL,   _DTYPE_STRING,   0,      NULL,      2,   28, 0x00,   _LCD_SCR_SET_INFORMATION },
@@ -103,15 +105,22 @@ void Display_Init (void)
     sLCDObject[__SET_MODBUS_BR].pData  = &sParaDisplay.Baudrate_u32; 
     
     sLCDObject[__SC1_NH4].pData        = &sParaDisplay.NH4_Filter_i32;    
-    sLCDObject[__SC1_TEMP].pData       = &sParaDisplay.Temp_Filter_i32;    
+    sLCDObject[__SC1_NH4].Scale_u8     = sParaDisplay.Scale_NH4; 
+    sLCDObject[__SC1_TEMP].pData       = &sParaDisplay.Temp_Filter_i32;   
+    sLCDObject[__SC1_TEMP].Scale_u8    = sParaDisplay.Scale_Temp; 
     
-    sLCDObject[__SET_NH4_VALUE].pData       = &sParaDisplay.NH4_Value_i32; 
+    sLCDObject[__SET_NH4_VALUE].pData      = &sParaDisplay.NH4_Value_i32;
+    sLCDObject[__SET_NH4_VALUE].Scale_u8   = sParaDisplay.Scale_NH4; 
 
-    sLCDObject[__SET_NH4_CALIB_ZERO].pData  = &sParaDisplay.NH4_Calib_Zero; 
-    sLCDObject[__SET_NH4_CALIB_SLOPE].pData = &sParaDisplay.NH4_Calib_Slope; 
+    sLCDObject[__SET_NH4_CALIB_ZERO].pData      = &sParaDisplay.NH4_Calib_Zero; 
+    sLCDObject[__SET_NH4_CALIB_ZERO].Scale_u8   = sParaDisplay.Scale_NH4; 
+    sLCDObject[__SET_NH4_CALIB_SLOPE].pData     = &sParaDisplay.NH4_Calib_Slope; 
+    sLCDObject[__SET_NH4_CALIB_SLOPE].Scale_u8  = sParaDisplay.Scale_NH4; 
     
-    sLCDObject[__SET_OFFSET_NH4].pData      = &sParaDisplay.NH4_Offset_i32; 
-    sLCDObject[__SET_OFFSET_TEMP].pData     = &sParaDisplay.temp_Offset_i32; 
+    sLCDObject[__SET_OFFSET_NH4].pData     = &sParaDisplay.NH4_Offset_i32; 
+    sLCDObject[__SET_OFFSET_NH4].Scale_u8  = sParaDisplay.Scale_NH4; 
+    sLCDObject[__SET_OFFSET_TEMP].pData    = &sParaDisplay.temp_Offset_i32; 
+    sLCDObject[__SET_OFFSET_TEMP].Scale_u8 = sParaDisplay.Scale_Temp;
 
     sLCDObject[__SCR_INFOR_FW_VERSION_2].pData   = sFirmVersion.Data_a8;
     sLCDObject[__SCR_INFOR_MODEL_2].pData   = sModelVersion.Data_a8;
@@ -348,14 +357,14 @@ void Update_ParaDisplay(void)
     sParaDisplay.ID_u8 = sSlave_ModbusRTU.ID;
     sParaDisplay.Baudrate_u32 = aBaudrate_value[sSlave_ModbusRTU.Baudrate];
     
-    sParaDisplay.NH4_Value_i32 = (int32_t)(sSensor_NH4.NH4_Value_f*100);
-    sParaDisplay.Temp_Value_i32 = (int32_t)(sSensor_NH4.temp_Value_f*100);
+    sParaDisplay.NH4_Value_i32 = (int32_t)(sSensor_NH4.NH4_Value_f * Calculator_Scale(sParaDisplay.Scale_NH4));
+    sParaDisplay.Temp_Value_i32 = (int32_t)(sSensor_NH4.temp_Value_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.NH4_Filter_i32 = (int32_t)(sSensor_NH4.NH4_Filter_f*100);
-    sParaDisplay.Temp_Filter_i32 = (int32_t)(sSensor_NH4.temp_Filter_f*100);
+    sParaDisplay.NH4_Filter_i32 = (int32_t)(sSensor_NH4.NH4_Filter_f * Calculator_Scale(sParaDisplay.Scale_NH4));
+    sParaDisplay.Temp_Filter_i32 = (int32_t)(sSensor_NH4.temp_Filter_f * Calculator_Scale(sParaDisplay.Scale_Temp));
     
-    sParaDisplay.NH4_Offset_i32   = (int32_t)(sSensor_NH4.NH4_Offset_f*100);
-    sParaDisplay.temp_Offset_i32 = (int32_t)(sSensor_NH4.temp_Offset_f*100);
+    sParaDisplay.NH4_Offset_i32   = (int32_t)(sSensor_NH4.NH4_Offset_f * Calculator_Scale(sParaDisplay.Scale_NH4));
+    sParaDisplay.temp_Offset_i32 = (int32_t)(sSensor_NH4.temp_Offset_f * Calculator_Scale(sParaDisplay.Scale_Temp));
 }
 
 void Display_Show_Oject (uint8_t object)
