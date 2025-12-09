@@ -28,7 +28,7 @@ sEvent_struct               sEventAppSensor[]=
   {_EVENT_SENSOR_WAIT_CALIB,         0, 5, 5000,             fevent_sensor_wait_calib},
   
   {_EVENT_DETECT_SALT_RECV,          1, 5, 60000,            fevent_detect_salt_recv},
-  {_EVENT_TEMP_ALARM,                1, 5, 2000,             fevent_temp_alarm},
+  {_EVENT_TEMP_ALARM,                1, 5, 60000,            fevent_temp_alarm},
   
   {_EVENT_SENSOR_RESET,              1, 0, 2000,             fevent_sensor_reset},
 };
@@ -50,9 +50,6 @@ struct_TempAlarm    sTempAlarm = {0};
 Struct_Sensor_DO    sSensor_DO={0};
 Struct_Hanlde_RS485 sHandleRs485 = {0};
 Struct_SaltPSU_Recv_Master  sSaltPSU_RecvMaster = {0};
-
-int16_t aPH_ZERO_CALIB[2] = {700, 686};
-int16_t aPH_SLOPE_CALIB[5] = {168, 401, 918, 1010, 1245};
 
 extern sData sUart485SS;
 /*========================Function Handle========================*/
@@ -188,19 +185,27 @@ static uint8_t fevent_detect_salt_recv(uint8_t event)
 
 static uint8_t fevent_temp_alarm(uint8_t event)
 {
-//    if(sTempAlarm.State == 1)
-//    {
-//        if((sSensorTemp.TempObject_f > sTempAlarm.Alarm_Upper) || 
-//           (sSensorTemp.TempObject_f < sTempAlarm.Alarm_Lower))
-//        {
-//            ALARM_ON;
-//        }
-//        else
-//            ALARM_OFF;
-//    }
-//    else 
-//        ALARM_OFF;
+    if(sTempAlarm.State == 1 && sHandleRs485.State_Recv_DO == 1)
+    {
+        if((sSensor_DO.Oxy_Mg_L_Filter_f >= sTempAlarm.Alarm_Upper) || 
+           (sSensor_DO.Oxy_Mg_L_Filter_f < sTempAlarm.Alarm_Lower))
+        {
+            HAL_GPIO_WritePin(MCU_RL1_GPIO_Port, MCU_RL1_Pin, GPIO_PIN_SET); 
+            HAL_GPIO_WritePin(MCU_RL2_GPIO_Port, MCU_RL2_Pin, GPIO_PIN_SET); 
+        }
+        else
+        {
+            HAL_GPIO_WritePin(MCU_RL1_GPIO_Port, MCU_RL1_Pin, GPIO_PIN_RESET); 
+            HAL_GPIO_WritePin(MCU_RL2_GPIO_Port, MCU_RL2_Pin, GPIO_PIN_RESET); 
+        }
+    }
+    else 
+    {
+        HAL_GPIO_WritePin(MCU_RL1_GPIO_Port, MCU_RL1_Pin, GPIO_PIN_RESET); 
+        HAL_GPIO_WritePin(MCU_RL2_GPIO_Port, MCU_RL2_Pin, GPIO_PIN_RESET); 
+    }
     
+    sEventAppSensor[_EVENT_TEMP_ALARM].e_period = 1000;
     fevent_enable(sEventAppSensor, event);
     return 1;
 }
@@ -502,7 +507,7 @@ float Filter_pH(float var)
         varFloat = var;
         
         //Thay doi nhanh du lieu
-        if(x_est_last - varFloat > 0.2 || varFloat - x_est_last > 0.2)
+        if(x_est_last - varFloat > 2 || varFloat - x_est_last > 2)
         {
            Q *=1000; 
         }
@@ -557,7 +562,7 @@ float Filter_DO_Per(float var)
         varFloat = var;
         
         //Thay doi nhanh du lieu
-        if(x_est_last - varFloat > 0.2 || varFloat - x_est_last > 0.2)
+        if(x_est_last - varFloat > 20 || varFloat - x_est_last > 20)
         {
            Q *=1000; 
         }
@@ -630,114 +635,6 @@ void RS485_LogData_Calib(uint8_t Kind_Send, const void *data, uint16_t size)
 }
 
 /*======================Function Handle Data====================*/
-int16_t _fSet_pH_Zero_Calib_UpDown(int16_t Value, int8_t Kind)
-{
-    uint8_t size_data = 2;
-    if(Kind == 1)
-    {
-        for(uint8_t i = 0; i< size_data; i++)
-        {
-            if(Value == aPH_ZERO_CALIB[i])
-            {
-              if(i == (size_data - 1))
-                return aPH_ZERO_CALIB[i];
-              else
-                return aPH_ZERO_CALIB[i+1];
-            }
-        }
-        return aPH_ZERO_CALIB[0];
-    }
-    else if(Kind == -1)
-    {
-        for(uint8_t i = 0; i< size_data; i++)
-        {
-            if(Value == aPH_ZERO_CALIB[i])
-            {
-              if(i == 0)
-                return aPH_ZERO_CALIB[0];
-              else
-                return aPH_ZERO_CALIB[i-1];
-            }
-        }
-        return aPH_ZERO_CALIB[0];
-    }
-    return aPH_ZERO_CALIB[0];
-}
-
-int16_t _fSet_pH_Slope_Calib_UpDown(int16_t Value, int8_t Kind)
-{
-    uint8_t size_data = 5;
-    if(Kind == 1)
-    {
-        for(uint8_t i = 0; i< size_data; i++)
-        {
-            if(Value == aPH_SLOPE_CALIB[i])
-            {
-              if(i == size_data - 1)
-                return aPH_SLOPE_CALIB[i];
-              else
-                return aPH_SLOPE_CALIB[i+1];
-            }
-        }
-        return aPH_SLOPE_CALIB[0];
-    }
-    else if(Kind == -1)
-    {
-        for(uint8_t i = 0; i< size_data; i++)
-        {
-            if(Value == aPH_SLOPE_CALIB[i])
-            {
-              if(i == 0)
-                return aPH_SLOPE_CALIB[0];
-              else
-                return aPH_SLOPE_CALIB[i-1];
-            }
-        }
-        return aPH_SLOPE_CALIB[0];
-    }
-    return aPH_SLOPE_CALIB[0];
-}
-
-int16_t _fRead_pH_Zero_Point(int16_t Value)
-{
-    uint8_t size_data = 2;
-    for(uint8_t i = 0; i< size_data; i++)
-    {
-        if(Value == aPH_ZERO_CALIB[i])
-          return i;
-    }
-    return 0;
-}
-
-int16_t _fRead_pH_Slope_Point(int16_t Value)
-{
-    uint8_t size_data = 5;
-    for(uint8_t i = 0; i< size_data; i++)
-    {
-        if(Value == aPH_SLOPE_CALIB[i])
-          return i;
-    }
-    return 0;
-}
-
-int16_t _fRead_pH_Zero_Calib(int16_t point)
-{
-    uint8_t size_data = 2;
-    if(point >= 0 && point < size_data)
-        return aPH_ZERO_CALIB[point];
-    else
-        return 0;
-}
-
-int16_t _fRead_pH_Slope_Calib(int16_t point)
-{
-    uint8_t size_data = 5;
-    if(point >= 0 && point < size_data)
-        return aPH_SLOPE_CALIB[point];
-    else
-        return 0;
-}
-
 uint32_t Read_Register_Rs485(uint8_t aData[], uint16_t *pos, uint8_t LengthData)
 {
     uint32_t stamp = 0;
@@ -914,8 +811,8 @@ void Init_TempAlarm(void)
     else
     {
         sTempAlarm.State = 0;
-        sTempAlarm.Alarm_Upper = LEVEL_MIN;
-        sTempAlarm.Alarm_Lower = LEVEL_MAX;
+        sTempAlarm.Alarm_Upper = ALARM_MAX;
+        sTempAlarm.Alarm_Lower = ALARM_MIN;
     }
 #endif   
 }
@@ -945,8 +842,8 @@ void AT_CMD_Restore_Slave(sData *str, uint16_t Pos)
     
     OnchipFlashPageErase(ADDR_TEMPERATURE_ALARM);
     sTempAlarm.State = 0;
-    sTempAlarm.Alarm_Upper = LEVEL_MAX;
-    sTempAlarm.Alarm_Lower = LEVEL_MIN;
+    sTempAlarm.Alarm_Upper = ALARM_MAX;
+    sTempAlarm.Alarm_Lower = ALARM_MIN;
     
     
     Insert_String_To_String(aTemp, &length, (uint8_t*)"Restore OK!\r\n",0 , 13);

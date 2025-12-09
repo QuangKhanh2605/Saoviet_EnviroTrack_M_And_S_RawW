@@ -10,9 +10,6 @@
 
 #define NUMBER_SAMPLING_SS      10
 
-#define LEVEL_MIN               50
-#define LEVEL_MAX               600
-
 #define CURR_OUT_MIN            4
 #define CURR_OUT_MAX            20
 
@@ -20,7 +17,10 @@
 #define DAC_MAX                 4095
 
 #define COD_RANGE_MAX           200
-#define TURB_RANGE_MAX          100
+#define TURB_RANGE_MAX          200
+
+#define ALARM_MIN               0
+#define ALARM_MAX               COD_RANGE_MAX
 
 typedef enum
 {

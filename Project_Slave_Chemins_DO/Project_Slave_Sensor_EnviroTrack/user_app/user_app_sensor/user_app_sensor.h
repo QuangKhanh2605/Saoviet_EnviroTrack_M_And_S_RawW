@@ -10,9 +10,6 @@
 
 #define NUMBER_SAMPLING_SS      10
 
-#define LEVEL_MIN               50
-#define LEVEL_MAX               600
-
 #define CURR_OUT_MIN            4
 #define CURR_OUT_MAX            20
 
@@ -20,6 +17,9 @@
 #define DAC_MAX                 4095
 
 #define OXY_MG_L_RANGE_MAX      20
+
+#define ALARM_MIN               0
+#define ALARM_MAX               OXY_MG_L_RANGE_MAX
 
 typedef enum
 {
@@ -164,12 +164,5 @@ void       Handle_State_Sensor(uint8_t KindRecv, uint8_t KindDetect);
 void       Handle_State_SS_DO(uint8_t KindRecv, uint8_t KindDetect);
 
 void       Handle_Data_Measure(uint8_t KindRecv);
-
-int16_t    _fSet_pH_Zero_Calib_UpDown(int16_t Value, int8_t Kind);
-int16_t    _fSet_pH_Slope_Calib_UpDown(int16_t Value, int8_t Kind);
-int16_t    _fRead_pH_Zero_Point(int16_t Value);
-int16_t    _fRead_pH_Slope_Point(int16_t Value);
-int16_t    _fRead_pH_Zero_Calib(int16_t point);
-int16_t    _fRead_pH_Slope_Calib(int16_t point);
 
 #endif

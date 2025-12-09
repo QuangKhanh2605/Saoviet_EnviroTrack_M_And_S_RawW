@@ -15,7 +15,6 @@ static uint8_t fevent_sensor_wait_calib(uint8_t event);
 
 static uint8_t fevent_detect_connect(uint8_t event);
 static uint8_t fevent_temp_alarm(uint8_t event);
-static uint8_t fevent_refresh_wdg_hard(uint8_t event);
 static uint8_t fevent_sensor_reset(uint8_t event);
 /*==============================Struct=============================*/
 sEvent_struct               sEventAppSensor[]=
@@ -29,8 +28,7 @@ sEvent_struct               sEventAppSensor[]=
   {_EVENT_SENSOR_WAIT_CALIB,         0, 5, 5000,             fevent_sensor_wait_calib},
   
   {_EVENT_DETECT_CONNECT,            1, 5, 15000,            fevent_detect_connect},
-  {_EVENT_TEMP_ALARM,                1, 5, 2000,             fevent_temp_alarm},
-  {_EVENT_REFRESH_WDG_HARD,          1, 5, 5,                fevent_refresh_wdg_hard},
+  {_EVENT_TEMP_ALARM,                1, 5, 60000,            fevent_temp_alarm},
   
   {_EVENT_SENSOR_RESET,              1, 0, 2000,             fevent_sensor_reset},
 };
@@ -73,23 +71,25 @@ static uint8_t fevent_sensor_transmit(uint8_t event)
     //Transmit RS485
     Send_RS458_Sensor(sFrame.Data_a8, sFrame.Length_u16);
    
-    switch (sLCD.sScreenNow.Index_u8)
-    {
-        case _LCD_SCR_SET_CALIB_SS_TSS:
-          if(sKindMode485.Trans < _RS485_SS_TSS_SLOPE)
-          {
-             sKindMode485.Trans++;
-          }
-          else
-          {
-            sKindMode485.Trans = _RS485_SS_TSS_OPERA;
-          }
-          break;
-          
-        default:
-              sKindMode485.Trans = _RS485_SS_TSS_OPERA;
-          break;
-    }
+//    switch (sLCD.sScreenNow.Index_u8)
+//    {
+//        case _LCD_SCR_SET_CALIB_SS_TSS:
+//          if(sKindMode485.Trans < _RS485_SS_TSS_SLOPE)
+//          {
+//             sKindMode485.Trans++;
+//          }
+//          else
+//          {
+//            sKindMode485.Trans = _RS485_SS_TSS_OPERA;
+//          }
+//          break;
+//          
+//        default:
+//              sKindMode485.Trans = _RS485_SS_TSS_OPERA;
+//          break;
+//    }
+    
+    sKindMode485.Trans = _RS485_SS_TSS_OPERA;
     
     fevent_active(sEventAppSensor, _EVENT_SENSOR_RECEIVE_HANDLE);
     fevent_enable(sEventAppSensor, _EVENT_SENSOR_RECEIVE_COMPLETE);
@@ -177,39 +177,27 @@ static uint8_t fevent_detect_connect(uint8_t event)
 
 static uint8_t fevent_temp_alarm(uint8_t event)
 {
-//    if(sTempAlarm.State == 1)
-//    {
-//        if((sSensorTemp.TempObject_f > sTempAlarm.Alarm_Upper) || 
-//           (sSensorTemp.TempObject_f < sTempAlarm.Alarm_Lower))
-//        {
-//            ALARM_ON;
-//        }
-//        else
-//            ALARM_OFF;
-//    }
-//    else 
-//        ALARM_OFF;
-    
-    fevent_enable(sEventAppSensor, event);
-    return 1;
-}
-
-static uint8_t fevent_refresh_wdg_hard(uint8_t event)
-{
-    static uint8_t state = 0;
-    
-    if(state == 0)
+    if(sTempAlarm.State == 1 && sHandleRs485.State_Recv_TSS == 1)
     {
-        HAL_GPIO_WritePin(TOGGLE_RESET_GPIO_Port, TOGGLE_RESET_Pin, GPIO_PIN_SET);
-        sEventAppSensor[_EVENT_REFRESH_WDG_HARD].e_period = 5;
-        state++;
+        if((sSensor_TSS.TSS_Filter_f >= sTempAlarm.Alarm_Upper) || 
+           (sSensor_TSS.TSS_Filter_f < sTempAlarm.Alarm_Lower))
+        {
+            HAL_GPIO_WritePin(MCU_RL1_GPIO_Port, MCU_RL1_Pin, GPIO_PIN_SET); 
+            HAL_GPIO_WritePin(MCU_RL2_GPIO_Port, MCU_RL2_Pin, GPIO_PIN_SET); 
+        }
+        else
+        {
+            HAL_GPIO_WritePin(MCU_RL1_GPIO_Port, MCU_RL1_Pin, GPIO_PIN_RESET); 
+            HAL_GPIO_WritePin(MCU_RL2_GPIO_Port, MCU_RL2_Pin, GPIO_PIN_RESET); 
+        }
     }
-    else
+    else 
     {
-        HAL_GPIO_WritePin(TOGGLE_RESET_GPIO_Port, TOGGLE_RESET_Pin, GPIO_PIN_RESET);
-        sEventAppSensor[_EVENT_REFRESH_WDG_HARD].e_period = 250;
-        state = 0;
+        HAL_GPIO_WritePin(MCU_RL1_GPIO_Port, MCU_RL1_Pin, GPIO_PIN_RESET); 
+        HAL_GPIO_WritePin(MCU_RL2_GPIO_Port, MCU_RL2_Pin, GPIO_PIN_RESET); 
     }
+    
+    sEventAppSensor[_EVENT_TEMP_ALARM].e_period = 1000;
     fevent_enable(sEventAppSensor, event);
     return 1;
 }
@@ -511,7 +499,7 @@ float Filter_pH(float var)
         varFloat = var;
         
         //Thay doi nhanh du lieu
-        if(x_est_last - varFloat > 0.2 || varFloat - x_est_last > 0.2)
+        if(x_est_last - varFloat > 20 || varFloat - x_est_last > 20)
         {
            Q *=1000; 
         }
@@ -749,8 +737,8 @@ void Init_TempAlarm(void)
     else
     {
         sTempAlarm.State = 0;
-        sTempAlarm.Alarm_Upper = LEVEL_MIN;
-        sTempAlarm.Alarm_Lower = LEVEL_MAX;
+        sTempAlarm.Alarm_Upper = ALARM_MAX;
+        sTempAlarm.Alarm_Lower = ALARM_MIN;
     }
 #endif   
 }
@@ -780,8 +768,8 @@ void AT_CMD_Restore_Slave(sData *str, uint16_t Pos)
     
     OnchipFlashPageErase(ADDR_TEMPERATURE_ALARM);
     sTempAlarm.State = 0;
-    sTempAlarm.Alarm_Upper = LEVEL_MAX;
-    sTempAlarm.Alarm_Lower = LEVEL_MIN;
+    sTempAlarm.Alarm_Upper = ALARM_MAX;
+    sTempAlarm.Alarm_Lower = ALARM_MIN;
     
     
     Insert_String_To_String(aTemp, &length, (uint8_t*)"Restore OK!\r\n",0 , 13);

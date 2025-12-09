@@ -10,9 +10,6 @@
 
 #define NUMBER_SAMPLING_SS      10
 
-#define LEVEL_MIN               50
-#define LEVEL_MAX               600
-
 #define CURR_OUT_MIN            4
 #define CURR_OUT_MAX            20
 
@@ -20,6 +17,9 @@
 #define DAC_MAX                 4095
 
 #define TSS_RANGE_MAX           2000
+
+#define ALARM_MIN               0
+#define ALARM_MAX               TSS_RANGE_MAX
 
 typedef enum
 {
@@ -32,7 +32,6 @@ typedef enum
     
     _EVENT_DETECT_CONNECT,
     _EVENT_TEMP_ALARM,
-    _EVENT_REFRESH_WDG_HARD,
     
     _EVENT_SENSOR_RESET,
     

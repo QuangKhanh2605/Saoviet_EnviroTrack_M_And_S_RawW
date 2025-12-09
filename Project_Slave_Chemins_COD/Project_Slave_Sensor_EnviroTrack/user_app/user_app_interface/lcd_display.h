@@ -44,7 +44,7 @@ typedef enum
 {
     __SC1_TITLE,
     __SC1_COD,
-    __SC1_TURB,
+//    __SC1_TURB,
     __SC1_TEMP,
     
     __PASS_WORD_TITLE,
@@ -55,6 +55,7 @@ typedef enum
     __SCR_SET_MODBUS,
     __SCR_SET_CALIB,
     __SCR_SET_OFFSET,
+    __SCR_SET_ALARM,
     __SCR_SET_INFOR,
     
     __SET_MODBUS_TITLE,
@@ -74,6 +75,11 @@ typedef enum
     __SET_OFFSET_COD,
     __SET_OFFSET_TURB,
     __SET_OFFSET_TEMP,
+    
+    __SET_ALARM_TITLE,
+    __SET_ALARM_STATE,
+    __SET_ALARM_UPPER,
+    __SET_ALARM_LOWER,
 
     __SCR_INFOR_TITLE,
     __SCR_INFOR_FW_VERSION_1,
@@ -98,6 +104,7 @@ typedef enum
     _LCD_SCR_SET_MODBUS,
     _LCD_SCR_SET_CALIB_SS_COD,
     _LCD_SCR_SET_OFFSET,
+    _LCD_SCR_SET_ALARM,
     
     _LCD_SCR_SET_INFORMATION,
     
@@ -174,6 +181,7 @@ typedef struct
     uint8_t     Scale_COD;
     uint8_t     Scale_TURB;
     uint8_t     Scale_Temp;
+    uint8_t     Scale_Alarm;
     
     int32_t     COD_Value_i32;
     int32_t     TURB_Value_i32;
@@ -192,6 +200,9 @@ typedef struct
     
     int32_t     TURB_Calib_Zero_i32;
     int32_t     TURB_Calib_Slope_i32;
+    
+    int32_t     Alarm_Upper_i32;
+    int32_t     Alarm_Lower_i32;
 }sParameter_Display;
 
 extern sEvent_struct        sEventDisplay[];
