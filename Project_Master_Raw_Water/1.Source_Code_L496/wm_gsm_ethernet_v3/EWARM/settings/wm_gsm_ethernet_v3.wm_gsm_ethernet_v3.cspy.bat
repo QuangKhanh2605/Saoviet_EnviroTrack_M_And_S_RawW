@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" "--debug_file=%~1" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" "--debug_file=%~1" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_Raw_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
 
 @echo off 
 :end
