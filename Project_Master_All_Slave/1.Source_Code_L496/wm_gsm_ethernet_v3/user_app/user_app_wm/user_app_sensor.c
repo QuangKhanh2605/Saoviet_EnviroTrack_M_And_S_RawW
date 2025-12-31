@@ -72,6 +72,7 @@ Struct_SensorWarning        sSensorWarning[] =
 Struct_MeasureHanle         sMeasureHandle [] =
 {
     //e_Name        sMeasureSensor            sMeasureHanlde              Scale_1  ParaScale  Scale_2
+  {_SS_POWER,   NULL,                        NULL,                         0x00,       0,      0x00},
   {_SS_PH,      &s485Measure[_SS_PH],        &sDataSensorMeasure.spH,      0xFE,       0,      0xFE},
   {_SS_CLO,     &s485Measure[_SS_CLO],       &sDataSensorMeasure.sClo,     0xFE,       0,      0xFE},
   {_SS_EC,      &s485Measure[_SS_EC],        &sDataSensorMeasure.sEC,      0x00,       0,      0x00},
@@ -388,6 +389,129 @@ void AT_CMD_Set_Time_Warning_Sensor (sData *str_Receiv, uint16_t Pos)
     }
 }
 
+void AT_CMD_Get_State_Sensor(sData *str, uint16_t Pos)
+{
+    uint8_t aTemp[200] = "State: ";   //11 ki tu dau tien
+    uint16_t length = 7;
+
+    Insert_String_To_String(aTemp, &length, (uint8_t*)"PH:",0 , 3);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_PH].sConnect_u8), 0x00);
+
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" CLO: ",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_CLO].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" EC:",0 , 4);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_EC].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TURB:",0 , 6);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_TURB].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" COD:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_COD].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TSS:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_TSS].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" NH4:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_NH4].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" DO:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_DO].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" SALT:",0 , 6);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_SALT].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TDS:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_TDS].sConnect_u8), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" NO3:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_NO3].sConnect_u8), 0x00);    
+	
+    Modem_Respond(PortConfig, aTemp, length, 0);
+}
+
+void AT_CMD_Get_Measure_Value (sData *str_Receiv, uint16_t Pos)
+{
+    uint8_t aTemp[300] = "Measure_Value: ";   //11 ki tu dau tien
+    uint16_t length = 15;
+
+    Insert_String_To_String(aTemp, &length, (uint8_t*)"PH:",0 , 3);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_PH].Value_f*100), 0xFE);
+
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" CLO: ",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_CLO].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" EC:",0 , 4);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_EC].Value_f), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TURB:",0 , 6);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_TURB].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" COD:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_COD].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TSS:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_TSS].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" NH4:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_NH4].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" DO:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_DO].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" SALT:",0 , 6);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_SALT].Value_f*100), 0xFE);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TDS:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_TDS].Value_f), 0x00);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" NO3:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(s485Measure[_SS_NO3].Value_f*100), 0xFE);    
+
+	Modem_Respond(PortConfig, aTemp, length, 0);
+}
+
+void AT_CMD_Get_Measure_Filter (sData *str_Receiv, uint16_t Pos)
+{
+    uint8_t aTemp[300] = "Measure_Filter: ";   //11 ki tu dau tien
+    uint16_t length = 16;
+
+    Insert_String_To_String(aTemp, &length, (uint8_t*)"PH:",0 , 3);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_PH].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_PH].sMeasureHanlde->Scale_u8);
+
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" CLO: ",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_CLO].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_CLO].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" EC:",0 , 4);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_EC].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_EC].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TURB:",0 , 6);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_TURB].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_TURB].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" COD:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_COD].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_COD].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TSS:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_TSS].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_TSS].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" NH4:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_NH4].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_NH4].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" DO:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_DO].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_DO].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" SALT:",0 , 6);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_SALT].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_SALT].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" TDS:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_TDS].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_TDS].sMeasureHanlde->Scale_u8);
+    
+    Insert_String_To_String(aTemp, &length, (uint8_t*)" NO3:",0 , 5);
+    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sMeasureHandle[_SS_NO3].sMeasureHanlde->Value_i32), sMeasureHandle[_SS_NO3].sMeasureHanlde->Scale_u8);
+
+	Modem_Respond(PortConfig, aTemp, length, 0);
+}
+
 void AT_CMD_Get_User_Sensor (sData *str_Receiv, uint16_t Pos)
 {
     uint8_t aTemp[200] = "User: ";   //11 ki tu dau tien
@@ -693,11 +817,18 @@ void Init_AppSensor(void)
     CheckList_AT_CONFIG[_GET_FREQ_WARNING_SENSOR].CallBack = AT_CMD_Get_Time_Warning_Sensor;
     CheckList_AT_CONFIG[_SET_FREQ_WARNING_SENSOR].CallBack = AT_CMD_Set_Time_Warning_Sensor;
     
+    CheckList_AT_CONFIG[_GET_STATE_SENSOR].CallBack = AT_CMD_Get_State_Sensor;
+    
+    CheckList_AT_CONFIG[_GET_MEASURE_VALUE].CallBack = AT_CMD_Get_Measure_Value;
+    CheckList_AT_CONFIG[_GET_MEASURE_FILTER].CallBack = AT_CMD_Get_Measure_Filter;
+    
     CheckList_AT_CONFIG[_GET_USER_SENSOR].CallBack = AT_CMD_Get_User_Sensor;
     CheckList_AT_CONFIG[_SET_USER_SENSOR].CallBack = AT_CMD_Set_User_Sensor;
     
     CheckList_AT_CONFIG[_GET_OFFSET_SENSOR].CallBack = AT_CMD_Get_Offset_Sensor;
     CheckList_AT_CONFIG[_SET_OFFSET_SENSOR].CallBack = AT_CMD_Set_Offset_Sensor;
+    
+    
 #endif
 }
 

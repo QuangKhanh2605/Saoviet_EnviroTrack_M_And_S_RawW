@@ -896,7 +896,7 @@
                     <item>sDataSensorMeasure</item>
                     <item>sLCDPageSensor</item>
                     <item>s485Measure</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

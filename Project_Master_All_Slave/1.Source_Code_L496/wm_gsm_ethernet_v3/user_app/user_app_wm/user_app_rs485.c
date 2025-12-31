@@ -358,77 +358,7 @@ uint32_t Read_Register_Rs485(uint8_t aData[], uint16_t *pos, uint8_t LengthData)
 
 /*==================Handle Define AT command=================*/
 #ifdef USING_AT_CONFIG
-void AT_CMD_Get_State_Sensor(sData *str, uint16_t Pos)
-{
-    uint8_t aTemp[60] = "State_Sensor Clo:";   //11 ki tu dau tien
-    uint16_t length = 17;
 
-//    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sRs485_Clo.State_Connect_u8), 0x00);
-//    Insert_String_To_String(aTemp, &length, (uint8_t*)" pH:",0 , 4);
-//    
-//    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sRs485_pH.State_Connect_u8), 0x00);
-//    Insert_String_To_String(aTemp, &length, (uint8_t*)" EC:",0 , 4);
-//    
-//    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sRs485_EC.State_Connect_u8), 0x00);
-//    Insert_String_To_String(aTemp, &length, (uint8_t*)" Turbidity:",0 , 11);
-//    
-//    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sRs485_Turb.State_Connect_u8), 0x00);
-////    Insert_String_To_String(aTemp, &length, (uint8_t*)" \r\n",0 , 3);
-
-	Modem_Respond(PortConfig, aTemp, length, 0);
-}
-
-void AT_CMD_Get_Measure_Value (sData *str_Receiv, uint16_t Pos)
-{
-    uint8_t aTemp[80] = "Measure_Value: Clo=";   //11 ki tu dau tien
-    uint16_t length = 19;
-
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sClo.Value_i32), sDataSensorMeasure.sClo.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"mg/L,pH=",0 , 8);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.spH.Value_i32), sDataSensorMeasure.spH.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)",Temp=",0 , 6);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sTemp.Value_i32), sDataSensorMeasure.sTemp.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"'C,EC=",0 , 6);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sEC.Value_i32), sDataSensorMeasure.sEC.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"uS/cm,Sali=",0 , 11);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sSal.Value_i32), sDataSensorMeasure.sSal.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"%,NTU=",0 , 6);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sTurb.Value_i32), sDataSensorMeasure.sTurb.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"NTU",0 , 3);
-
-	Modem_Respond(PortConfig, aTemp, length, 0);
-}
-
-void AT_CMD_Get_Measure_Filter (sData *str_Receiv, uint16_t Pos)
-{
-    uint8_t aTemp[80] = "Measure_Filter: Clo=";   //11 ki tu dau tien
-    uint16_t length = 20;
-
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sClo.Value_i32), sDataSensorMeasure.sClo.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"mg/L,pH=",0 , 8);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.spH.Value_i32), sDataSensorMeasure.spH.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)",Temp=",0 , 6);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sTemp.Value_i32), sDataSensorMeasure.sTemp.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"'C,EC=",0 , 6);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sEC.Value_i32), sDataSensorMeasure.sEC.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"uS/cm,Sali=",0 , 11);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sSal.Value_i32), sDataSensorMeasure.sSal.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"%,NTU=",0 , 6);
-    
-    Convert_Point_Int_To_String_Scale (aTemp, &length, (int)(sDataSensorMeasure.sTurb.Value_i32), sDataSensorMeasure.sTurb.Scale_u8);
-    Insert_String_To_String(aTemp, &length, (uint8_t*)"NTU",0 , 3);
-
-	Modem_Respond(PortConfig, aTemp, length, 0);
-}
 #endif
 
 /*========================Handle Data========================*/
@@ -518,9 +448,7 @@ void       Init_AppRs485(void)
     Init_Parameter_Sensor();
 #ifdef USING_AT_CONFIG
     /* regis cb serial */
-    CheckList_AT_CONFIG[_GET_STATE_SENSOR].CallBack = AT_CMD_Get_State_Sensor;
-    CheckList_AT_CONFIG[_GET_MEASURE_VALUE].CallBack = AT_CMD_Get_Measure_Value;
-    CheckList_AT_CONFIG[_GET_MEASURE_FILTER].CallBack = AT_CMD_Get_Measure_Filter;
+    
 #endif
     RS485_Para_Init();
 }
