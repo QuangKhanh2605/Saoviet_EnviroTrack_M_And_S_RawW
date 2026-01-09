@@ -1,137 +1,137 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.40.2.214/W32 for ARM                  31/Dec/2025  14:22:39
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  05/Jan/2026  09:51:50
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Exe\wm_gsm_ethernet_v3.out
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Exe\wm_gsm_ethernet_v3.out
 #    Map file     =
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\List\wm_gsm_ethernet_v3.map
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\List\wm_gsm_ethernet_v3.map
 #    Command line =
-#        -f C:\Users\PC\AppData\Local\Temp\EW6223.tmp
-#        (D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\adc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\button.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\cat24mxx.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\dhcp.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\dma.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\dns.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\event_driven.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\glcd.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\gpio.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\graphics.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\graphs.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\i2c.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\lcd_display.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\level_S_YW_01B.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\level_SUP_PX261_B.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\level_ultrasonic.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\lptim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\main.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTConnectClient.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTConnectServer.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTDeserializePublish.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTFormat.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTPacket.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTSerializePublish.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTSubscribeClient.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTSubscribeServer.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTUnsubscribeClient.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTUnsubscribeServer.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\NT75451.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\onchipflash.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\PCD8544.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\queue_p.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\rtc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\S25FL216K.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\socket.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\spi.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\ST7565R.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\startup_stm32l496xx.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32F0xx.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32F10x.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32F4.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32L4.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_adc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_adc_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_cortex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_dma.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_dma_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_exti.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_flash.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_flash_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_flash_ramfunc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_gpio.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_i2c.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_i2c_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_lptim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_msp.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_pwr.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_pwr_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rcc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rcc_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rtc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rtc_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_spi.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_spi_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_tim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_tim_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_uart.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_uart_ex.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_it.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\system_stm32l4xx.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\text.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\text_tiny.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\tim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\unit_tests.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\usart.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_adc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_adv_trace.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_comm.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_ethernet.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_mem.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_rs485.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_sensor.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_sim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_sms_call.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_wm.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_at_serial.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_convert_variable.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_ec200u.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_internal_mem.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_json.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_l506.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_l511.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_log.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_lpm.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_lptim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_mem_comm.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_modbus_rtu.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_modem.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_mqtt.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_obis_sv.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_rs485.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_rtc.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_sim.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_sim_common.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_string.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_time.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_timer.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_tiny_vsnprintf.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_uart.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_util.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_wm_digital.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\w5500.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\wizchip_conf.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\wm_mt100.o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\woteck_wm.o
+#        -f C:\Users\PC\AppData\Local\Temp\EW1F7E.tmp
+#        (D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\adc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\button.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\cat24mxx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\dhcp.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\dma.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\dns.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\event_driven.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\glcd.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\gpio.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\graphics.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\graphs.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\i2c.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\lcd_display.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\level_S_YW_01B.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\level_SUP_PX261_B.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\level_ultrasonic.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\lptim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\main.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTConnectClient.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTConnectServer.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTDeserializePublish.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTFormat.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTPacket.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTSerializePublish.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTSubscribeClient.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTSubscribeServer.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTUnsubscribeClient.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\MQTTUnsubscribeServer.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\NT75451.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\onchipflash.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\PCD8544.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\queue_p.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\rtc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\S25FL216K.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\socket.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\spi.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\ST7565R.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\startup_stm32l496xx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32F0xx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32F10x.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32F4.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\STM32L4.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_adc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_adc_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_cortex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_dma.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_dma_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_exti.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_flash.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_flash_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_flash_ramfunc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_gpio.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_i2c.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_i2c_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_lptim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_msp.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_pwr.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_pwr_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rcc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rcc_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rtc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_rtc_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_spi.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_spi_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_tim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_tim_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_uart.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_hal_uart_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\stm32l4xx_it.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\system_stm32l4xx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\text.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\text_tiny.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\tim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\unit_tests.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\usart.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_adc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_adv_trace.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_comm.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_ethernet.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_mem.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_rs485.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_sensor.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_sim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_sms_call.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_app_wm.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_at_serial.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_convert_variable.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_ec200u.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_internal_mem.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_json.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_l506.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_l511.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_log.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_lpm.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_lptim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_mem_comm.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_modbus_rtu.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_modem.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_mqtt.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_obis_sv.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_rs485.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_rtc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_sim.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_sim_common.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_string.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_time.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_timer.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_tiny_vsnprintf.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_uart.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_util.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\user_wm_digital.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\w5500.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\wizchip_conf.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\wm_mt100.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj\woteck_wm.o
 #        --no_out_extension -o
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Exe\wm_gsm_ethernet_v3.out
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Exe\wm_gsm_ethernet_v3.out
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --map
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\List\wm_gsm_ethernet_v3.map
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\List\wm_gsm_ethernet_v3.map
 #        --config
-#        D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM/stm32l496xx_flash.icf
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM/stm32l496xx_flash.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
@@ -1524,7 +1524,7 @@ command line/config:
     ---------------------------------------------------
     Total:
 
-D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj: [1]
+D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj: [1]
     MQTTConnectClient.o           496       16
     MQTTPacket.o                  264
     MQTTSerializePublish.o        200        4
@@ -3644,7 +3644,7 @@ writeInt                 0x802'97e9    0x2a  Code  Gb  MQTTPacket.o [1]
 writeMQTTString          0x802'983d    0x42  Code  Gb  MQTTPacket.o [1]
 
 
-[1] = D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj
+[1] = D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\1.Source_Code_L496\wm_gsm_ethernet_v3\EWARM\wm_gsm_ethernet_v3\Obj
 [2] = dl7M_tlf.a
 [3] = m7M_tls.a
 [4] = rt7M_tl.a
