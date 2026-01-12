@@ -90,7 +90,7 @@ void       RS485_Para_Init(void)
     
     sRegSensor[_E_CLO_SEND_PH].State = &s485Measure[_SS_CLO].sUser;
     sRegSensor[_E_CLO_SEND_PH].subReg = &sRs485SubReg.pH;
-    sRegSensor[_E_CLO_SEND_PH].nConnect = &s485Measure[_SS_PH].nConnect_u8;
+    sRegSensor[_E_CLO_SEND_PH].nConnect = &s485Measure[_SS_CLO].nConnect_u8;
     
     sRegSensor[_E_CLO_VALUE].State = &s485Measure[_SS_CLO].sUser;
     sRegSensor[_E_CLO_VALUE].vReturn = &s485Measure[_SS_CLO].Value_f;

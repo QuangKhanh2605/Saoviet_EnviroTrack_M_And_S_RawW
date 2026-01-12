@@ -1,90 +1,90 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.40.2.214/W32 for ARM                  05/Dec/2025  16:28:20
+# IAR ELF Linker V8.40.2.214/W32 for ARM                  12/Jan/2026  10:14:49
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Exe\Project_Slave_Sensor_EnviroTrack.out
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Exe\Project_Slave_Sensor_EnviroTrack.out
 #    Map file     =
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\List\Project_Slave_Sensor_EnviroTrack.map
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\List\Project_Slave_Sensor_EnviroTrack.map
 #    Command line =
-#        -f C:\Users\PC\AppData\Local\Temp\EW1FA2.tmp
-#        (D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\button.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\dma.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\event_driven.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\glcd.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\gpio.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\graphics.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\graphs.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\lcd_display.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\main.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\NT75451.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\onchipflash.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\PCD8544.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\queue_p.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\rtc.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\spi.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\ST7565R.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\startup_stm32l433xx.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32F0xx.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32F10x.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32F4.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32L4.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_cortex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_dma.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_dma_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_exti.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_flash.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_flash_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_flash_ramfunc.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_gpio.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_i2c.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_i2c_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_msp.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_pwr.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_pwr_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rcc.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rcc_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rtc.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rtc_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_spi.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_spi_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_uart.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_uart_ex.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_it.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\system_stm32l4xx.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\text.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\text_tiny.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\unit_tests.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\usart.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_adv_trace.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_comm.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_modbus_rtu.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_rs485.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_sensor.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_at_serial.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_connect_sensor.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_convert_variable.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_internal_mem.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_mem_comm.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_modbus_rtu.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_obis_sv.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_rs485.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_rtc.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_string.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_time.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_timer.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_tiny_vsnprintf.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_uart.o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_util.o
+#        -f C:\Users\PC\AppData\Local\Temp\EW673A.tmp
+#        (D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\button.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\dma.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\event_driven.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\glcd.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\gpio.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\graphics.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\graphs.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\lcd_display.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\main.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\NT75451.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\onchipflash.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\PCD8544.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\queue_p.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\rtc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\spi.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\ST7565R.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\startup_stm32l433xx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32F0xx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32F10x.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32F4.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\STM32L4.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_cortex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_dma.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_dma_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_exti.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_flash.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_flash_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_flash_ramfunc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_gpio.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_i2c.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_i2c_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_msp.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_pwr.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_pwr_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rcc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rcc_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rtc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_rtc_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_spi.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_spi_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_uart.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_hal_uart_ex.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\stm32l4xx_it.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\system_stm32l4xx.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\text.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\text_tiny.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\unit_tests.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\usart.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_adv_trace.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_comm.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_modbus_rtu.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_rs485.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_app_sensor.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_at_serial.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_connect_sensor.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_convert_variable.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_internal_mem.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_mem_comm.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_modbus_rtu.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_obis_sv.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_rs485.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_rtc.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_string.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_time.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_timer.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_tiny_vsnprintf.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_uart.o
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj\user_util.o
 #        --no_out_extension -o
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Exe\Project_Slave_Sensor_EnviroTrack.out
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Exe\Project_Slave_Sensor_EnviroTrack.out
 #        --redirect _Printf=_PrintfFullNoMb --redirect _Scanf=_ScanfFullNoMb
 #        --map
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\List\Project_Slave_Sensor_EnviroTrack.map
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\List\Project_Slave_Sensor_EnviroTrack.map
 #        --config
-#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM/stm32l433xx_flash.icf
+#        D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM/stm32l433xx_flash.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
@@ -591,7 +591,7 @@ command line/config:
     ---------------------------------------------------
     Total:
 
-D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj: [1]
+D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj: [1]
     ST7565R.o                     348
     STM32L4.o                     176
     button.o                    5'120        5       45
@@ -1357,7 +1357,7 @@ vcom_Init                0x800'b9b9    0xa  Code  Gb  user_app_comm.o [1]
 vcom_Trace_DMA           0x800'b9e1   0x24  Code  Gb  user_app_comm.o [1]
 
 
-[1] = D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj
+[1] = D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_TSS\Project_Slave_Sensor_EnviroTrack\EWARM\Project_Slave_Sensor_EnviroTrack\Obj
 [2] = dl7M_tlf.a
 [3] = m7M_tls.a
 [4] = rt7M_tl.a

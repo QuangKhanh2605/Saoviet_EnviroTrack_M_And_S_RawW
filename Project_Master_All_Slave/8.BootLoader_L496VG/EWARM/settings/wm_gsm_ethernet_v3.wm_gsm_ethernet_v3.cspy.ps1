@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" --backend -f "D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" --debug_file=$debugfile --backend -f "D:\Project_STM32\Project_Test_Datalogger\Project_Master_Clean_Water\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Master_All_Slave\8.BootLoader_L496VG\EWARM\settings\wm_gsm_ethernet_v3.wm_gsm_ethernet_v3.driver.xcl" 
 }

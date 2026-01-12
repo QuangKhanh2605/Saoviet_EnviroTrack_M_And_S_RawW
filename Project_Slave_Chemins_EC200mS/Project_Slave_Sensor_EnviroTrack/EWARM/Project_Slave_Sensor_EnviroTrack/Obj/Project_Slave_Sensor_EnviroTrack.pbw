@@ -275280,16 +275280,16 @@
     "scope": null
   },
   {
-    "ID": "c:user_app_sensor.h@372@macro@EC_RANGE_MAX",
+    "ID": "c:user_app_sensor.h@372@macro@TDS_RANGE_MAX",
     "What": "MacroDef",
     "defdec": "Def",
-    "display": "EC_RANGE_MAX",
+    "display": "TDS_RANGE_MAX",
     "location": {
       "column": "9",
       "line": "19",
       "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_app_sensor\\user_app_sensor.h"
     },
-    "name": "EC_RANGE_MAX",
+    "name": "TDS_RANGE_MAX",
     "origin": "user_include",
     "scope": null
   },
@@ -276093,16 +276093,16 @@
         "scope": "_anonymous_user_app_sensor_h_100_9"
       },
       {
-        "ID": "c:@SA@Struct_Sensor_EC@FI@EC_Offset_f",
+        "ID": "c:@SA@Struct_Sensor_EC@FI@TDS_Offset_f",
         "What": "FieldDecl",
         "defdec": "Def",
-        "display": "EC_Offset_f",
+        "display": "TDS_Offset_f",
         "location": {
           "column": "13",
           "line": "113",
           "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_app_sensor\\user_app_sensor.h"
         },
-        "name": "EC_Offset_f",
+        "name": "TDS_Offset_f",
         "origin": "user_include",
         "scope": "_anonymous_user_app_sensor_h_100_9"
       },
@@ -287470,16 +287470,16 @@
         "scope": null
       },
       {
-        "ID": "c:@EA@sOJECT_WM@__SC1_EC",
+        "ID": "c:@EA@sOJECT_WM@__SC1_TDS",
         "What": "Enumerator",
         "defdec": "Def",
-        "display": "__SC1_EC",
+        "display": "__SC1_TDS",
         "location": {
           "column": "5",
           "line": "46",
           "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_app_interface\\lcd_display.h"
         },
-        "name": "__SC1_EC",
+        "name": "__SC1_TDS",
         "origin": "user_include",
         "scope": null
       },
@@ -289058,20 +289058,6 @@
       "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_app_interface\\lcd_display.h"
     },
     "name": "sLCD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@sLCDObject",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "sLCDObject",
-    "location": {
-      "column": "28",
-      "line": "204",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_app_interface\\lcd_display.h"
-    },
-    "name": "sLCDObject",
     "origin": "user_include",
     "scope": null
   },
@@ -335024,6 +335010,62 @@
     "scope": null
   },
   {
+    "ID": "c:stm32l4xx_hal_spi_ex.c@1355@macro@SPI_FIFO_SIZE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SPI_FIFO_SIZE",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
+    },
+    "name": "SPI_FIFO_SIZE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@HAL_SPIEx_FlushRxFifo",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "HAL_StatusTypeDef HAL_SPIEx_FlushRxFifo(const SPI_HandleTypeDef *)",
+    "location": {
+      "column": "19",
+      "line": "79",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
+    },
+    "name": "HAL_SPIEx_FlushRxFifo",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l4xx_hal_spi_ex.c@2625@F@HAL_SPIEx_FlushRxFifo@tmpreg",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tmpreg",
+    "location": {
+      "column": "17",
+      "line": "81",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
+    },
+    "name": "tmpreg",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l4xx_hal_spi_ex.c@2649@F@HAL_SPIEx_FlushRxFifo@count",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "count",
+    "location": {
+      "column": "12",
+      "line": "82",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
+    },
+    "name": "count",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:user_app_comm.c@F@_Cb_Timer_IRQ",
     "What": "Function",
     "defdec": "Dec",
@@ -335892,62 +335934,6 @@
     "scope": null
   },
   {
-    "ID": "c:stm32l4xx_hal_spi_ex.c@1355@macro@SPI_FIFO_SIZE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SPI_FIFO_SIZE",
-    "location": {
-      "column": "9",
-      "line": "41",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
-    },
-    "name": "SPI_FIFO_SIZE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@HAL_SPIEx_FlushRxFifo",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "HAL_StatusTypeDef HAL_SPIEx_FlushRxFifo(const SPI_HandleTypeDef *)",
-    "location": {
-      "column": "19",
-      "line": "79",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
-    },
-    "name": "HAL_SPIEx_FlushRxFifo",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l4xx_hal_spi_ex.c@2625@F@HAL_SPIEx_FlushRxFifo@tmpreg",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tmpreg",
-    "location": {
-      "column": "17",
-      "line": "81",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
-    },
-    "name": "tmpreg",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l4xx_hal_spi_ex.c@2649@F@HAL_SPIEx_FlushRxFifo@count",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "count",
-    "location": {
-      "column": "12",
-      "line": "82",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\Drivers\\STM32L4xx_HAL_Driver\\Src\\stm32l4xx_hal_spi_ex.c"
-    },
-    "name": "count",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:lcd_display.c@F@_Cb_Display_Init",
     "What": "Function",
     "defdec": "Dec",
@@ -336202,7 +336188,7 @@
   {
     "ID": "c:@sLCDObject",
     "What": "Variable",
-    "defdec": "Def",
+    "defdec": "Dec",
     "display": "sLCDObject",
     "location": {
       "column": "20",
@@ -344658,146 +344644,6 @@
     "scope": null
   },
   {
-    "ID": "c:user_at_serial.c@aDATA_CONFIG",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "aDATA_CONFIG",
-    "location": {
-      "column": "16",
-      "line": "8",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "aDATA_CONFIG",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:user_at_serial.c@aAT_CMD",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "aAT_CMD",
-    "location": {
-      "column": "16",
-      "line": "9",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "aAT_CMD",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@strATcmd",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "strATcmd",
-    "location": {
-      "column": "7",
-      "line": "10",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "strATcmd",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@CheckList_AT_CONFIG",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "CheckList_AT_CONFIG",
-    "location": {
-      "column": "21",
-      "line": "13",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "CheckList_AT_CONFIG",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@PortConfig",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "PortConfig",
-    "location": {
-      "column": "9",
-      "line": "113",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "PortConfig",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@Modem_Check_AT",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "uint8_t Modem_Check_AT(sData *, uint8_t)",
-    "location": {
-      "column": "9",
-      "line": "116",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "Modem_Check_AT",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:user_at_serial.c@6429@F@Modem_Check_AT@var",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "var",
-    "location": {
-      "column": "10",
-      "line": "119",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "var",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:user_at_serial.c@6444@F@Modem_Check_AT@Pos_Str",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "Pos_Str",
-    "location": {
-      "column": "6",
-      "line": "120",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "Pos_Str",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:user_at_serial.c@6464@F@Modem_Check_AT@i",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "i",
-    "location": {
-      "column": "11",
-      "line": "121",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "i",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:user_at_serial.c@6482@F@Modem_Check_AT@sDataConfig",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "sDataConfig",
-    "location": {
-      "column": "8",
-      "line": "122",
-      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
-    },
-    "name": "sDataConfig",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@pRS485_Send_Data",
     "What": "Variable",
     "defdec": "Dec",
@@ -345186,6 +345032,146 @@
       "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_app_modbus_rtu\\user_rs485.c"
     },
     "name": "ModSlave",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_at_serial.c@aDATA_CONFIG",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "aDATA_CONFIG",
+    "location": {
+      "column": "16",
+      "line": "8",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "aDATA_CONFIG",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_at_serial.c@aAT_CMD",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "aAT_CMD",
+    "location": {
+      "column": "16",
+      "line": "9",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "aAT_CMD",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@strATcmd",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "strATcmd",
+    "location": {
+      "column": "7",
+      "line": "10",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "strATcmd",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@CheckList_AT_CONFIG",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "CheckList_AT_CONFIG",
+    "location": {
+      "column": "21",
+      "line": "13",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "CheckList_AT_CONFIG",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@PortConfig",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "PortConfig",
+    "location": {
+      "column": "9",
+      "line": "113",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "PortConfig",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Modem_Check_AT",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "uint8_t Modem_Check_AT(sData *, uint8_t)",
+    "location": {
+      "column": "9",
+      "line": "116",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "Modem_Check_AT",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_at_serial.c@6429@F@Modem_Check_AT@var",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "var",
+    "location": {
+      "column": "10",
+      "line": "119",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "var",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_at_serial.c@6444@F@Modem_Check_AT@Pos_Str",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "Pos_Str",
+    "location": {
+      "column": "6",
+      "line": "120",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "Pos_Str",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_at_serial.c@6464@F@Modem_Check_AT@i",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "i",
+    "location": {
+      "column": "11",
+      "line": "121",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "i",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:user_at_serial.c@6482@F@Modem_Check_AT@sDataConfig",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "sDataConfig",
+    "location": {
+      "column": "8",
+      "line": "122",
+      "path": "D:\\Saoviet_Git\\Saoviet_EnviroTrack_M_And_S_RawW\\Project_Slave_Chemins_EC200mS\\Project_Slave_Sensor_EnviroTrack\\user_app\\user_at_serial\\user_at_serial.c"
+    },
+    "name": "sDataConfig",
     "origin": "project_file",
     "scope": null
   },

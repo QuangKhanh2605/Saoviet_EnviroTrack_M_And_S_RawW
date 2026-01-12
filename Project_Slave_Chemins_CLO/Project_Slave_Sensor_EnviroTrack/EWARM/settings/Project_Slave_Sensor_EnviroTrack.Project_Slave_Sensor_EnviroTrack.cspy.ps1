@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
+& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" --debug_file=$debugfile --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_CLO\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
 }
