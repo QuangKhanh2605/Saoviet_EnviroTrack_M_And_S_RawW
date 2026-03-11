@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_Turb_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_Turb_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_Turb_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" "--debug_file=%~1" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawWater\Project_Slave_Chemins_Turb_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.3\common\bin\cspybat" -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.general.xcl" "--debug_file=%~1" --backend -f "D:\Saoviet_Git\Saoviet_EnviroTrack_M_And_S_RawW\Project_Slave_Chemins_10NTU\Project_Slave_Sensor_EnviroTrack\EWARM\settings\Project_Slave_Sensor_EnviroTrack.Project_Slave_Sensor_EnviroTrack.driver.xcl" 
 
 @echo off 
 :end
