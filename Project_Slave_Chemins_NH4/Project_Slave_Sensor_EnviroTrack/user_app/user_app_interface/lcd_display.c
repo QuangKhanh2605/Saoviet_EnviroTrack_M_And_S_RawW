@@ -50,7 +50,7 @@ uint8_t *aModeSelectONOFF[2] = {"OFF", "ON"};
 sOjectInformation  sLCDObject[] = 
 {
 //          para          name                  value      dtype         scale   unit      row  col      screen
-    {   __SC1_TITLE,      "NH4+.",           NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TITLE,      "NH4_N.",           NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
     {   __SC1_NH4,        NULL,             NULL,   _DTYPE_I16,      0,     "mg/L",     4,  0,  0x00,      _LCD_SCREEN_1  },
     {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0,     " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
   
