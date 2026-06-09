@@ -155,7 +155,7 @@
                     <item>sSlave_ModbusRTU</item>
                     <item>sTempAlarm</item>
                     <item>sMeasureRange</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

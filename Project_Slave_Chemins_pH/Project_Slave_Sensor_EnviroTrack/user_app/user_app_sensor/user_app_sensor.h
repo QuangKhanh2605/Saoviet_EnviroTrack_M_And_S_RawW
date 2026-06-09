@@ -40,6 +40,8 @@ typedef enum
     
     _EVENT_SENSOR_RESET,
     
+    _EVENT_HANDLE_STATE_SENSOR,
+    
     _EVENT_SENSOR_END,
 }eKindEventSENSOR;
 
@@ -67,6 +69,20 @@ typedef enum
     _SENSOR_DISCONNECT = 0,
     _SENSOR_CONNECT,
 }eKindStateSensor;
+
+typedef enum
+{
+    _SS_DISCONNECT,
+    _SS_ERROR,
+    _SS_MEASURE,
+    _SS_CALIB,
+}eKindStateSS;
+
+typedef enum
+{
+    _MEASURE_INVALID,
+    _MEASURE_VALID,
+}eKindStateMeasure;
 
 typedef enum
 {
@@ -124,6 +140,10 @@ typedef struct
     
     float   pH_Offset_f;
     float   temp_Offset_f;
+    
+    uint8_t State_Sensor_u8;
+    uint8_t State_Measure_PH_u8;
+    uint8_t State_Measure_Temp_u8;
 }Struct_Sensor_pH;
 
 extern sEvent_struct        sEventAppSensor[];

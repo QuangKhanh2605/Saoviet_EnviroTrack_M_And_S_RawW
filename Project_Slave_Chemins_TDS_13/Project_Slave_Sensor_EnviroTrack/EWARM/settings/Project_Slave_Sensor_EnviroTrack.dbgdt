@@ -152,7 +152,7 @@
                     <item>sTempAlarm</item>
                     <item>sSensor_EC</item>
                     <item>sMeasureRange</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

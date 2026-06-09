@@ -50,7 +50,7 @@ uint8_t *aModeSelectONOFF[2] = {"OFF", "ON"};
 sOjectInformation  sLCDObject[] = 
 {
 //          para          name                  value      dtype         scale   unit      row  col      screen
-    {   __SC1_TITLE,      "NO3-.",           NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
+    {   __SC1_TITLE,      "NO3_N.",           NULL,   _DTYPE_STRING,   0x00,      NULL,      0,  0,  0x00,      _LCD_SCREEN_1  },
     {   __SC1_NO3,        NULL,             NULL,   _DTYPE_I16,      0,     "mg/L",     4,  0,  0x00,      _LCD_SCREEN_1  },
     {   __SC1_TEMP,       "Temp  : ",       NULL,   _DTYPE_I16,      0,     " ‰C",      7,  0,  0x00,      _LCD_SCREEN_1  },
   
@@ -312,7 +312,7 @@ static uint8_t _Cb_Display_Auto_SW (uint8_t event)
     static uint16_t cNext = 0;
     static uint8_t MarkButtPressed = false;
     
-    if (Check_Time_Out(sButton.LandMarkPressButton_u32, 60000*10) == true) {
+    if (Check_Time_Out(sButton.LandMarkPressButton_u32, 60000*60) == true) {
         if (MarkButtPressed == true) {
             MarkButtPressed = false;
             sLCD.sScreenNow.Index_u8 = _LCD_SCREEN_1;

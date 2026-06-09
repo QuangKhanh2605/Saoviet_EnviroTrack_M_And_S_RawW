@@ -16,10 +16,12 @@ static uint8_t fevent_sensor_wait_calib(uint8_t event);
 static uint8_t fevent_detect_salt_recv(uint8_t event);
 static uint8_t fevent_temp_alarm(uint8_t event);
 static uint8_t fevent_sensor_reset(uint8_t event);
+
+static uint8_t fevent_handle_state_sensor(uint8_t event);
 /*==============================Struct=============================*/
 sEvent_struct               sEventAppSensor[]=
 {
-  {_EVENT_SENSOR_ENTRY,              1, 5, 10000,            fevent_sensor_entry},            //Doi slave khoi dong moi truyen opera
+  {_EVENT_SENSOR_ENTRY,              1, 5, 15000,            fevent_sensor_entry},            //Doi slave khoi dong moi truyen opera
   
   {_EVENT_SENSOR_TRANSMIT,           0, 5, 1500,             fevent_sensor_transmit},
   {_EVENT_SENSOR_RECEIVE_HANDLE,     0, 5, 5,                fevent_sensor_receive_handle},
@@ -31,6 +33,8 @@ sEvent_struct               sEventAppSensor[]=
   {_EVENT_TEMP_ALARM,                1, 5, 60000,            fevent_temp_alarm},
   
   {_EVENT_SENSOR_RESET,              1, 0, 2000,             fevent_sensor_reset},
+  
+  {_EVENT_HANDLE_STATE_SENSOR,       1, 5, 100,              fevent_handle_state_sensor},
 };
 int32_t aSampling_STT[NUMBER_SAMPLING_SS] = {0};
 int32_t aSampling_VALUE[NUMBER_SAMPLING_SS] = {0};
@@ -225,6 +229,34 @@ static uint8_t fevent_sensor_reset(uint8_t event)
         HAL_GPIO_WritePin(ON_PW_SEN1_GPIO_Port, ON_PW_SEN1_Pin, GPIO_PIN_SET);
         HAL_GPIO_WritePin(ON_PW_SEN2_GPIO_Port, ON_PW_SEN2_Pin, GPIO_PIN_SET);
         sEventAppSensor[_EVENT_SENSOR_RESET].e_period = 60000;
+    }
+    
+    fevent_enable(sEventAppSensor, event);
+    return 1;
+}
+
+static uint8_t fevent_handle_state_sensor(uint8_t event)
+{
+    if(sSensor_EC.State_Connect == _SENSOR_DISCONNECT)
+        sSensor_EC.State_Sensor_u8 = _SS_DISCONNECT;
+    else
+    {
+        if((sLCD.sScreenNow.Index_u8 == _LCD_SCR_SET_CALIB_SS_EC) || 
+           (sLCD.sScreenNow.Index_u8 == _LCD_SCR_CHECK_SETTING && sLCD.sScreenBack.Index_u8 == _LCD_SCR_SET_CALIB_SS_EC))
+            sSensor_EC.State_Sensor_u8 = _SS_CALIB;
+        else
+            sSensor_EC.State_Sensor_u8 = _SS_MEASURE;
+    }
+    
+    if(sHandleRs485.State_Recv_EC == 1)
+    {
+        sSensor_EC.State_Measure_TDS_u8 = _MEASURE_VALID;
+        sSensor_EC.State_Measure_Temp_u8 = _MEASURE_VALID;
+    }
+    else
+    {
+        sSensor_EC.State_Measure_TDS_u8 = _MEASURE_INVALID;
+        sSensor_EC.State_Measure_Temp_u8 = _MEASURE_INVALID;
     }
     
     fevent_enable(sEventAppSensor, event);

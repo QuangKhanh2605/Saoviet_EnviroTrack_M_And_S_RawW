@@ -39,6 +39,7 @@ typedef enum
     _EVENT_TEMP_ALARM,
     
     _EVENT_SENSOR_RESET,
+    _EVENT_HANDLE_STATE_SENSOR,
     
     _EVENT_SENSOR_END,
 }eKindEventSENSOR;
@@ -73,6 +74,20 @@ typedef enum
     _RS485_UNRESPOND = 0,
     _RS485_RESPOND,
 }eKindStateRs485Respond;
+
+typedef enum
+{
+    _SS_DISCONNECT,
+    _SS_ERROR,
+    _SS_MEASURE,
+    _SS_CALIB,
+}eKindStateSS;
+
+typedef enum
+{
+    _MEASURE_INVALID,
+    _MEASURE_VALID,
+}eKindStateMeasure;
 
 typedef struct 
 {
@@ -127,6 +142,10 @@ typedef struct
     float   Oxy_Mg_L_Offset_f;
     float   Oxy_Percent_Offset_f;
     float   temp_Offset_f;
+    
+    uint8_t State_Sensor_u8;
+    uint8_t State_Measure_DO_u8;
+    uint8_t State_Measure_Temp_u8;
 }Struct_Sensor_DO;
 
 typedef struct

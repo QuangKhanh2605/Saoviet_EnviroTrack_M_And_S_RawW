@@ -16,8 +16,8 @@
 #define DAC_MIN                 0
 #define DAC_MAX                 4095
 
-#define COD_RANGE_MAX           200
-#define TURB_RANGE_MAX          200
+#define COD_RANGE_MAX           500
+#define TURB_RANGE_MAX          400
 
 #define ALARM_MIN               0
 #define ALARM_MAX               COD_RANGE_MAX
@@ -40,6 +40,8 @@ typedef enum
     _EVENT_TEMP_ALARM,
     
     _EVENT_SENSOR_RESET,
+    
+    _EVENT_HANDLE_STATE_SENSOR,
     
     _EVENT_SENSOR_END,
 }eKindEventSENSOR;
@@ -79,6 +81,20 @@ typedef enum
     _RS485_UNRESPOND = 0,
     _RS485_RESPOND,
 }eKindStateRs485Respond;
+
+typedef enum
+{
+    _SS_DISCONNECT,
+    _SS_ERROR,
+    _SS_MEASURE,
+    _SS_CALIB,
+}eKindStateSS;
+
+typedef enum
+{
+    _MEASURE_INVALID,
+    _MEASURE_VALID,
+}eKindStateMeasure;
 
 typedef struct 
 {
@@ -139,6 +155,10 @@ typedef struct
     
     float   TURB_Zero_Calib_f;
     float   TURB_Slope_Calib_f;
+    
+    uint8_t State_Sensor_u8;
+    uint8_t State_Measure_COD_u8;
+    uint8_t State_Measure_Temp_u8;
 }Struct_Sensor_COD;
 
 extern sEvent_struct        sEventAppSensor[];

@@ -70,9 +70,9 @@ sOjectInformation  sLCDObject[] =
     
     {   __SET_TSS_TITLE,        "CALIB SENSOR",   NULL,   _DTYPE_STRING,   0,  NULL,       0,  0,  0x00,    _LCD_SCR_SET_CALIB_SS_TSS},
     {   __SET_TSS_VALUE,        "TSS: ",          NULL,   _DTYPE_I32,      0,  NULL,       2,  5,  0x00,    _LCD_SCR_SET_CALIB_SS_TSS},
-    {   __SET_TSS_CALIB_ZERO,   "1.Zero : ",      NULL,   _DTYPE_I32,      0,  " mg/L",     3,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_TSS},
-    {   __SET_TSS_CALIB_SLOPE,  "2.Slope: ",      NULL,   _DTYPE_I32,      0,  " mg/L",     4,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_TSS},
-    {   __SET_TSS_RESET,        "3.Reset",        NULL,   _DTYPE_STRING,   0,  NULL,       5,  0, 0x00,    _LCD_SCR_SET_CALIB_SS_TSS},
+    {   __SET_TSS_CALIB_ZERO,   "1.Zero : ",      NULL,   _DTYPE_I32,      0,  " mg/L",    3,  0, 0x00,     _LCD_SCR_SET_CALIB_SS_TSS},
+    {   __SET_TSS_CALIB_SLOPE,  "2.Slope: ",      NULL,   _DTYPE_I32,      0,  " mg/L",    4,  0, 0x00,     _LCD_SCR_SET_CALIB_SS_TSS},
+    {   __SET_TSS_RESET,        "3.Reset",        NULL,   _DTYPE_STRING,   0,  NULL,       5,  0, 0x00,     _LCD_SCR_SET_CALIB_SS_TSS},
     
     {   __SET_OFFSET_TITLE, "OFFSET",          NULL,   _DTYPE_STRING,  0,      NULL,       0,  0, 0x00,     _LCD_SCR_SET_OFFSET},
     {   __SET_OFFSET_TSS,   "1.TSS  : ",       NULL,   _DTYPE_I32,     0,   " mg/L",     2,  0, 0x00,    _LCD_SCR_SET_OFFSET},
@@ -310,7 +310,7 @@ static uint8_t _Cb_Display_Auto_SW (uint8_t event)
     static uint16_t cNext = 0;
     static uint8_t MarkButtPressed = false;
     
-    if (Check_Time_Out(sButton.LandMarkPressButton_u32, 60000*10) == true) {
+    if (Check_Time_Out(sButton.LandMarkPressButton_u32, 60000*60) == true) {
         if (MarkButtPressed == true) {
             MarkButtPressed = false;
             sLCD.sScreenNow.Index_u8 = _LCD_SCREEN_1;
