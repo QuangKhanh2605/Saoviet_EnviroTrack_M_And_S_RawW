@@ -157,7 +157,7 @@
                     <item>sCalibPlus</item>
                     <item>aSampling_VALUE</item>
                     <item>UartDebugBuff</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
@@ -960,7 +960,7 @@
             </BasePane-34104>
             <IarPane-34104>
                 <expressions>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>
